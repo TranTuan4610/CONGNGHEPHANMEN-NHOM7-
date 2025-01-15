@@ -10,38 +10,51 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color:rgb(253, 255, 255); /* Nền xanh biển nhạt */
+            background-color: rgb(253, 255, 255); /* Nền xanh biển nhạt */
             color: #333;
         }
 
         /* Thanh thông tin trên cùng */
-        .top-bar {
+        .header-top {
+            background-color: #439EC2;
             display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 20px;
+            color: #fff;
+            flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #0288d1; /* Xanh biển đậm */
-            color: white;
-            font-size: 14px;
+            padding: 17px 20px 17px 41px;
+            font: 700 15px Roboto, sans-serif;
         }
 
-        .top-bar div {
+        .contact-info {
             display: flex;
             align-items: center;
+            gap: 40px 75px;
+            flex-wrap: wrap;
         }
 
-        .top-bar div img {
-            margin-left: 10px;
-            width: 20px;
-            height: 14px;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        .top-bar div span {
-            margin-left: 10px;
+        .contact-icon {
+            aspect-ratio: 1;
+            object-fit: contain;
+            width: 30px;
         }
 
-        .icon {
-            margin-right: 10px;
+        .contact-text {
+            margin: auto 0;
+        }
+
+        .social-icon {
+            aspect-ratio: 1.54;
+            object-fit: contain;
+            width: 54px;
         }
 
         /* Navigation */
@@ -78,22 +91,23 @@
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <div>
-            <span class="icon">📍</span>
-            <span>Quận 12, Thành phố Hồ Chí Minh</span>
+    <!-- Thanh thông tin trên cùng (header-top) -->
+    <div class="header-top">
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8106f6317fc1b9d32c55ece5a941af9832c278eb81e8e3c89494501eb2159a3?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
+                <span class="contact-text">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</span>
+            </div>
+            <div class="contact-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/11b40b44f10e268728c6c7dd8d59c1e73771dbd09198be2390bef99a1d6dfd88?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
+                <span class="contact-text">petshophcm@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3979fb3ba50193d9baab96d3727fcd5071f21c2113cbc3f1e2dfad1d2b58deef?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
+                <span class="contact-text">0385900258</span>
+            </div>
         </div>
-        <div>
-            <span class="icon">✉️</span>
-            <span>petshophcm@gmail.com</span>
-        </div>
-        <div>
-            <span class="icon">📞</span>
-            <span>0385900258</span>
-        </div>
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/20px-Flag_of_Vietnam.svg.png" alt="Vietnam Flag">
-        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0ebf15b510f3e36db0dcc13c6ad1655f4de26ed017abfbbd334b624ff440871?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="social-icon" />
     </div>
 
     <nav>
