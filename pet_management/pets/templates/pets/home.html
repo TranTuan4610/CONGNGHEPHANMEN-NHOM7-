@@ -18,80 +18,167 @@
         .header-top {
             background-color: #439EC2;
             display: flex;
-            width: 100%;
-            align-items: center;
-            gap: 20px;
-            color: #fff;
-            flex-wrap: wrap;
             justify-content: space-between;
-            padding: 17px 20px 17px 41px;
-            font: 700 15px Roboto, sans-serif;
+            align-items: center;
+            padding: 15px 30px;
+            color: #fff;
+            font: 700 14px Roboto, sans-serif;
+            flex-wrap: wrap;
         }
 
         .contact-info {
             display: flex;
+            gap: 30px;
             align-items: center;
-            gap: 40px 75px;
-            flex-wrap: wrap;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
 
         .contact-icon {
-            aspect-ratio: 1;
+            width: 25px;
+            height: 25px;
             object-fit: contain;
-            width: 30px;
         }
 
         .contact-text {
-            margin: auto 0;
+            font-size: 14px;
         }
 
-        .social-icon {
-            aspect-ratio: 1.54;
-            object-fit: contain;
-            width: 54px;
+        /* Khung ảnh và chữ "GIA ĐÌNH MỚI - HY VỌNG MỚI" */
+        .hero-section {
+            width: 100%;
+            height: 400px;
+            background: url('<path-to-image>') no-repeat center/cover;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            padding: 20px;
+            background-color: #439EC2;
         }
 
-        /* Navigation */
-        nav {
-            margin: 20px auto;
-            text-align: center;
+        .hero-text {
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 35px;
+            font-weight: 700;
+            margin: 0;
+            padding-bottom: 10px;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #0288d1; /* Xanh biển đậm */
+        .paw-icon {
+            width: 50px;
+            height: 50px;
+            background: url('<path-to-image>') no-repeat center/contain;
+            margin: 10px 0;
+        }
+
+        .middle-text {
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .bottom-text {
+            width: 450px;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+
+        /* Menu điều hướng */
+        .nav-links {
+            display: flex;
+            gap: 30px;
             font-weight: bold;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #0288d1;
             padding: 10px 20px;
             border: 2px solid #0288d1;
             border-radius: 5px;
-            transition: all 0.3s;
-            margin: 0 10px;
             background-color: white;
+            transition: all 0.3s;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             background-color: #0288d1;
             color: white;
+        }
+
+        /* Đặt tên người dùng và đăng xuất ở góc phải */
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-info {
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+        }
+
+        .logout-btn {
+            padding: 5px 15px;
+            background-color: #ff5722;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .logout-btn:hover {
+            background-color: #d45d00;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #b3e5fc; /* Xanh biển nhạt */
+            padding: 15px;
+            background-color: #b3e5fc;
             color: #01579b;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .header-top {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-section {
+                height: 350px;
+                padding: 15px;
+            }
+
+            .hero-text {
+                font-size: 28px;
+            }
+
+            .paw-icon {
+                width: 40px;
+                height: 40px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Thanh thông tin trên cùng (header-top) -->
+    <!-- Thanh điều hướng -->
     <div class="header-top">
         <div class="contact-info">
             <div class="contact-item">
@@ -103,22 +190,46 @@
                 <span class="contact-text">petshophcm@gmail.com</span>
             </div>
             <div class="contact-item">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3979fb3ba50193d9baab96d3727fcd5071f21c2113cbc3f1e2dfad1d2b58deef?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3979fb3ba50193d9baab96d3727fcd5071f21dbd09198be2390bef99a1d6dfd88?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
                 <span class="contact-text">0385900258</span>
             </div>
         </div>
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0ebf15b510f3e36db0dcc13c6ad1655f4de26ed017abfbbd334b624ff440871?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="social-icon" />
     </div>
 
-    <nav>
-        <a href="{% url 'register_user' %}">Đăng ký</a>
-        <a href="{% url 'login_user' %}">Đăng nhập</a>
+    <!-- Menu điều hướng -->
+    <div class="nav-links">
         <a href="{% url 'add_pet' %}">Thêm thú cưng</a>
         <a href="{% url 'view_pets' %}">Xem thú cưng</a>
-    </nav>
+        <a href="{% url 'view_fund_balance' %}">Xem quỹ</a>
+        <a href="{% url 'donate_to_fund' %}">Đóng quỹ</a>
+        <a href="{% url 'adopt_pet' %}">Nhận nuôi</a>
+
+        {% if request.session.user_id %}
+            <div class="user-actions">
+                <span class="user-info">Xin chào, {{ user.username }}</span>
+                <a href="{% url 'logout' %}" class="logout-btn">Đăng xuất</a>
+            </div>
+        {% else %}
+            <div class="user-actions">
+                <a href="{% url 'register_user' %}">Đăng ký</a>
+                <a href="{% url 'login_user' %}">Đăng nhập</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div>
+            <div class="hero-text">GIA ĐÌNH MỚI - HY VỌNG MỚI</div>
+            <div class="paw-icon"></div>
+            <div class="middle-text">NHỮNG BÉ CÚN, BÉ MÈO ĐANG CHỜ ĐƯỢC NHẬN NUÔI</div>
+            <div class="bottom-text">Mong các bạn hãy cho các bé một cơ hội! <br>Trở thành một thành viên trong gia đình của mình.</div>
+        </div>
+    </div>
 
     <footer>
         &copy; 2025 Hệ thống quản lý thú cưng. All rights reserved.
     </footer>
 </body>
 </html>
+    
