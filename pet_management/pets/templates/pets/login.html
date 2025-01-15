@@ -1,14 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
+    <style>
+        /* Tổng quan */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Nền xanh biển nhạt */
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #0288d1; /* Xanh biển đậm */
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Form container */
+        .form-container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 400px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #0288d1;
+            margin-bottom: 20px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container form input,
+        .form-container form button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .form-container form input:focus {
+            border-color: #0288d1;
+            outline: none;
+        }
+
+        .form-container form button {
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .form-container form button:hover {
+            background-color: #026aa7;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #b3e5fc; /* Xanh biển nhạt */
+            color: #01579b;
+        }
+    </style>
 </head>
 <body>
-    <h1>Đăng nhập</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Đăng nhập</button>
-    </form>
+    <header>
+        <h1>Đăng nhập</h1>
+    </header>
+
+    <div class="form-container">
+        <h1>Đăng nhập</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Đăng nhập</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 Hệ thống quản lý thú cưng. All rights reserved.
+    </footer>
 </body>
 </html>
