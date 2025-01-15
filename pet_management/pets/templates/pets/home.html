@@ -1,13 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý thú cưng</title>
+    <style>
+        /* Tổng quan */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(253, 255, 255); /* Nền xanh biển nhạt */
+            color: #333;
+        }
+
+        /* Thanh thông tin trên cùng */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #0288d1; /* Xanh biển đậm */
+            color: white;
+            font-size: 14px;
+        }
+
+        .top-bar div {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar div img {
+            margin-left: 10px;
+            width: 20px;
+            height: 14px;
+        }
+
+        .top-bar div span {
+            margin-left: 10px;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0288d1; /* Xanh biển đậm */
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #0288d1;
+            border-radius: 5px;
+            transition: all 0.3s;
+            margin: 0 10px;
+            background-color: white;
+        }
+
+        nav a:hover {
+            background-color: #0288d1;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #b3e5fc; /* Xanh biển nhạt */
+            color: #01579b;
+        }
+    </style>
 </head>
 <body>
-    <h1>Chào mừng đến với hệ thống quản lý thú cưng!</h1>
-    <a href="{% url 'register_user' %}">Đăng ký</a> | 
-    <a href="{% url 'login_user' %}">Đăng nhập</a> | 
-    <a href="{% url 'add_pet' %}">Thêm thú cưng</a> |
-    <a href="{% url 'view_pets' %}">Xem thú cưng</a>
+    <div class="top-bar">
+        <div>
+            <span class="icon">📍</span>
+            <span>Quận 12, Thành phố Hồ Chí Minh</span>
+        </div>
+        <div>
+            <span class="icon">✉️</span>
+            <span>petshophcm@gmail.com</span>
+        </div>
+        <div>
+            <span class="icon">📞</span>
+            <span>0385900258</span>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/20px-Flag_of_Vietnam.svg.png" alt="Vietnam Flag">
+        </div>
+    </div>
+
+    <nav>
+        <a href="{% url 'register_user' %}">Đăng ký</a>
+        <a href="{% url 'login_user' %}">Đăng nhập</a>
+        <a href="{% url 'add_pet' %}">Thêm thú cưng</a>
+        <a href="{% url 'view_pets' %}">Xem thú cưng</a>
+    </nav>
+
+    <footer>
+        &copy; 2025 Hệ thống quản lý thú cưng. All rights reserved.
+    </footer>
 </body>
 </html>
