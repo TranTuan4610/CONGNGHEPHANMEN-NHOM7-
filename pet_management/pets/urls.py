@@ -17,4 +17,6 @@ urlpatterns = [
     path('view-balance/', views.view_fund_balance, name='view_fund_balance'),
     path('edit-pet/<int:pet_id>/', views.edit_pet, name='edit_pet'),  # Route chỉnh sửa
     path('delete-pet/<int:pet_id>/', views.delete_pet, name='delete_pet'),  # Route xóa
+    path('about/', views.about_us, name='about_us'),
+    path('news/', views.news, name='news'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
