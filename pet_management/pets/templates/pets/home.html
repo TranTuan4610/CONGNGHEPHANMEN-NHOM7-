@@ -1,235 +1,1607 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý thú cưng</title>
-    <style>
-        /* Tổng quan */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: rgb(253, 255, 255); /* Nền xanh biển nhạt */
-            color: #333;
-        }
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+.trang-chu {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
 
-        /* Thanh thông tin trên cùng */
-        .header-top {
-            background-color: #439EC2;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            color: #fff;
-            font: 700 14px Roboto, sans-serif;
-            flex-wrap: wrap;
-        }
+.trang-chu .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 3772px;
+    position: relative;
+}
 
-        .contact-info {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
+.trang-chu .line {
+    width: 960px;
+    top: 3130px;
+    left: 240px;
+    position: absolute;
+    height: 1px;
+    object-fit: cover;
+}
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+.trang-chu .subtract {
+    position: absolute;
+    width: 314px;
+    height: 12px;
+    top: 3133px;
+    left: 563px;
+}
 
-        .contact-icon {
-            width: 25px;
-            height: 25px;
-            object-fit: contain;
-        }
+.trang-chu .frame {
+    position: absolute;
+    width: 1044px;
+    height: 454px;
+    top: 915px;
+    left: 201px;
+}
 
-        .contact-text {
-            font-size: 14px;
-        }
+.trang-chu .img {
+    width: 960px;
+    top: 363px;
+    left: 39px;
+    position: absolute;
+    height: 1px;
+    object-fit: cover;
+}
 
-        /* Khung ảnh và chữ "GIA ĐÌNH MỚI - HY VỌNG MỚI" */
-        .hero-section {
-            width: 100%;
-            height: 400px;
-            background: url('<path-to-image>') no-repeat center/cover;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            position: relative;
-            padding: 20px;
-            background-color: #439EC2;
-        }
+.trang-chu .subtract-2 {
+    position: absolute;
+    width: 314px;
+    height: 12px;
+    top: 366px;
+    left: 362px;
+}
 
-        .hero-text {
-            color: #FFF;
-            font-family: Roboto;
-            font-size: 35px;
-            font-weight: 700;
-            margin: 0;
-            padding-bottom: 10px;
-        }
+.trang-chu .overlap {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    background-color: #eaf3fd;
+    border-radius: 15px;
+}
 
-        .paw-icon {
-            width: 50px;
-            height: 50px;
-            background: url('<path-to-image>') no-repeat center/contain;
-            margin: 10px 0;
-        }
+.trang-chu .element-khi-nhung-doi {
+    position: absolute;
+    width: 167px;
+    height: 131px;
+    top: 3px;
+    left: 57px;
+    object-fit: cover;
+}
 
-        .middle-text {
-            color: #FFF;
-            font-size: 18px;
-            font-weight: 500;
-            text-transform: capitalize;
-        }
+.trang-chu .text-wrapper {
+    position: absolute;
+    top: 149px;
+    left: 100px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #999999;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
 
-        .bottom-text {
-            width: 450px;
-            color: #FFF;
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: capitalize;
-        }
+.trang-chu .p {
+    position: absolute;
+    width: 220px;
+    top: 194px;
+    left: 30px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
 
-        /* Menu điều hướng */
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            font-weight: bold;
-        }
+.trang-chu .overlap-group {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 381px;
+    background-color: #eaf3fd;
+    border-radius: 15px;
+}
 
-        .nav-links a {
-            text-decoration: none;
-            color: #0288d1;
-            padding: 10px 20px;
-            border: 2px solid #0288d1;
-            border-radius: 5px;
-            background-color: white;
-            transition: all 0.3s;
-        }
+.trang-chu .istockphoto {
+    position: absolute;
+    width: 167px;
+    height: 131px;
+    top: 8px;
+    left: 63px;
+    object-fit: cover;
+}
 
-        .nav-links a:hover {
-            background-color: #0288d1;
-            color: white;
-        }
+.trang-chu .text-wrapper-2 {
+    position: absolute;
+    top: 155px;
+    left: 90px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #999999;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
 
-        /* Đặt tên người dùng và đăng xuất ở góc phải */
-        .user-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+.trang-chu .text-wrapper-3 {
+    position: absolute;
+    width: 220px;
+    top: 199px;
+    left: 36px;
+    font-family: "RArialr", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
 
-        .user-info {
-            font-weight: bold;
-            color: white;
-            font-size: 18px;
-        }
+.trang-chu .overlap-2 {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 764px;
+    background-color: #eaf3fd;
+    border-radius: 15px;
+}
 
-        .logout-btn {
-            padding: 5px 15px;
-            background-color: #ff5722;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-        }
+.trang-chu .element-dia-diem-cuu-ho {
+    position: absolute;
+    width: 167px;
+    height: 131px;
+    top: 6px;
+    left: 56px;
+}
 
-        .logout-btn:hover {
-            background-color: #d45d00;
-        }
+.trang-chu .text-wrapper-4 {
+    position: absolute;
+    top: 152px;
+    left: 44px;
+    font-family: "Ariald", sans-serif;
+    font-weight: 700;
+    color: #999999;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #b3e5fc;
-            color: #01579b;
-        }
+.trang-chu .text-wrapper-5 {
+    position: absolute;
+    width: 220px;
+    top: 197px;
+    left: 29px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
 
-        /* Responsive */
-        @media screen and (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
+.trang-chu .group {
+    position: absolute;
+    width: 226px;
+    height: 27px;
+    top: 297px;
+    left: 23px;
+}
+
+.trang-chu .div-wrapper {
+    position: relative;
+    width: 224px;
+    height: 27px;
+    background-color: #55b5db;
+    border-radius: 10px;
+}
+
+.trang-chu .text-wrapper-6 {
+    position: absolute;
+    top: 4px;
+    left: 61px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #f6fafb;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-wrapper {
+    position: absolute;
+    width: 226px;
+    height: 27px;
+    top: 299px;
+    left: 409px;
+}
+
+.trang-chu .overlap-group-wrapper {
+    position: absolute;
+    width: 226px;
+    height: 27px;
+    top: 298px;
+    left: 792px;
+}
+
+.trang-chu .overlap-3 {
+    position: absolute;
+    width: 496px;
+    height: 71px;
+    top: 382px;
+    left: 273px;
+}
+
+.trang-chu .text-wrapper-7 {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .veterinarian {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    left: 223px;
+}
+
+.trang-chu .veterinarian-2 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 2072px;
+    left: 699px;
+}
+
+.trang-chu .text-wrapper-8 {
+    position: absolute;
+    top: 2040px;
+    left: 679px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .frame-2 {
+    position: absolute;
+    width: 1440px;
+    height: 150px;
+    top: 3189px;
+    left: 0;
+    background-color: #55b5db;
+}
+
+.trang-chu .ungho1 {
+    position: absolute;
+    top: 60px;
+    left: 139px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .group-2 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 42px;
+    left: 964px;
+}
+
+.trang-chu .overlap-group-2 {
+    position: relative;
+    width: 220px;
+    height: 65px;
+    border-radius: 10px;
+    background: linear-gradient(
+        180deg,
+        rgb(202.16, 221.87, 253.58) 0%,
+        rgb(57.02, 149.41, 255) 100%
+    );
+}
+
+.trang-chu .text-wrapper-9 {
+    position: absolute;
+    top: 19px;
+    left: 39px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .frame-3 {
+    position: absolute;
+    width: 1440px;
+    height: 363px;
+    top: 3409px;
+    left: 0;
+    background: linear-gradient(
+        180deg,
+        rgb(214.63, 228.67, 251.27) 0%,
+        rgb(85, 181, 219) 100%
+    );
+}
+
+.trang-chu .pet-removebg-preview {
+    position: absolute;
+    width: 236px;
+    height: 140px;
+    top: 56px;
+    left: 19px;
+}
+
+.trang-chu .facebook-circled {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 196px;
+    left: 44px;
+}
+
+.trang-chu .gmail-logo {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 196px;
+    left: 114px;
+}
+
+.trang-chu .instagram {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 198px;
+    left: 184px;
+}
+
+.trang-chu .pawfund {
+    position: absolute;
+    width: 527px;
+    top: 20px;  /* Giảm giá trị top xuống 1cm */
+    left: 306px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #787777;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+
+.trang-chu .text-wrapper-10 {
+    position: absolute;
+    top: 79px;
+    left: 870px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #787777;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-4 {
+    position: absolute;
+    width: 540px;
+    height: 128px;
+    top: 118px;
+    left: 880px;
+}
+
+.trang-chu .element-opinion {
+    position: absolute;
+    width: 540px;
+    height: 124px;
+    top: 37.8px; /* Điều chỉnh top xuống 1 cm */
+    left: 0;
+    object-fit: cover;
+}
+
+.trang-chu .pet-removebg-preview-2 {
+    position: absolute;
+    width: 194px;
+    height: 125px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.trang-chu .call {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 232px;
+    left: 324px;
+}
+
+.trang-chu .th-ng-tin-li-n-h {
+    position: absolute;
+    width: 362px;
+    top: 209px;
+    left: 358px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .span {
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+.trang-chu .map-marker {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 292px;
+    left: 324px;
+}
+
+.trang-chu .gmail-logo-2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 262px;
+    left: 324px;
+}
+
+.trang-chu .line-2 {
+    width: 338px;
+    top: 271px;
+    left: 963px;
+    position: absolute;
+    height: 1px;
+    object-fit: cover;
+}
+
+.trang-chu .nhn-nui {
+    position: absolute;
+    width: 1197px;
+    height: 540px;
+    top: 1403px;
+    left: 121px;
+}
+
+.trang-chu .overlap-5 {
+    position: relative;
+    height: 540px;
+}
+
+.trang-chu .khung-nhn-nui {
+    position: absolute;
+    width: 1196px;
+    height: 540px;
+    top: 0;
+    left: 1px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .hnh-mo-mt {
+    left: 83px;
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 26px;
+    object-fit: cover;
+}
+
+.trang-chu .hnh-ch-u-u {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 26px;
+    left: 478px;
+    object-fit: cover;
+}
+
+.trang-chu .hnh-mo-cam {
+    left: 873px;
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 26px;
+    object-fit: cover;
+}
+
+.trang-chu .t-n-m-t-gi-i-t-nh-c {
+    position: absolute;
+    width: 241px;
+    top: 304px;
+    left: 83px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-11 {
+    font-weight: 600;
+}
+
+.trang-chu .text-wrapper-12 {
+    font-family: "Arial", sans-serif;
+}
+
+.trang-chu .text-wrapper-13 {
+    font-family: "Arial", sans-serif;
+    font-weight: 500;
+}
+
+.trang-chu .t-n-u-u-gi-i-t-nh-c {
+    position: absolute;
+    width: 224px;
+    top: 309px;
+    left: 478px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-14 {
+    font-weight: 500;
+}
+
+.trang-chu .t-n-cam-gi-i-t-nh-c {
+    position: absolute;
+    width: 224px;
+    top: 309px;
+    left: 873px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 232px;
+    left: 1137px;
+}
+
+.trang-chu .previous {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 232px;
+    left: 0;
+}
+
+.trang-chu .group-3 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 445px;
+    left: 496px;
+}
+
+.trang-chu .group1 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 445px;
+    left: 496px;
+} 
+
+.trang-chu .group2 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 446px;
+    left: 891px;
+}
+
+.trang-chu .group3 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 445px;
+    left: 101px;
+}
+
+.trang-chu .overlap-group-3 {
+    position: relative;
+    width: 250px;
+    height: 70px;
+    background-color: #55b5db;
+    border-radius: 15px;
+    left: -20px;
+}
+
+.trang-chu .text1 {
+    position: absolute;
+    top: 21px;
+    left: calc(5px + 11.34px);
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text2 {
+    position: absolute;
+    top: 19px;
+    left: 39px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text3 {
+    position: absolute;
+    top: 20px;
+    left: 53px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+
+.trang-chu .text-wrapper-15 {
+    position: absolute;
+    top: 20px;
+    left: 53px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .tin-tc {
+    position: absolute;
+    width: 1168px;
+    height: 1002px;
+    top: 2117px;
+    left: 134px;
+}
+
+.trang-chu .overlap-6 {
+    position: absolute;
+    width: 1164px;
+    height: 288px;
+    top: 0;
+    left: 0;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .element {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 15px;
+    left: 71px;
+}
+
+.trang-chu .ch-m-o-c-p-bi-n-t-tr {
+    position: absolute;
+    top: 14px;
+    left: 359px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-16 {
+    position: absolute;
+    width: 454px;
+    top: 59px;
+    left: 359px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-7 {
+    position: absolute;
+    width: 1164px;
+    height: 288px;
+    top: 307px;
+    left: 4px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .img-2 {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 23px;
+    left: 67px;
+}
+
+.trang-chu .th-c-ng-l-m-b-nh-nhi {
+    position: absolute;
+    top: 22px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .ng-i-y-u-c-th-kh-ng {
+    position: absolute;
+    width: 454px;
+    top: 67px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-8 {
+    position: absolute;
+    width: 1164px;
+    height: 288px;
+    top: 629px;
+    left: 4px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .GHPN {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 16px;
+    left: 67px;
+    object-fit: cover;
+}
+
+.trang-chu .text-wrapper-17 {
+    position: absolute;
+    top: 15px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-18 {
+    position: absolute;
+    width: 454px;
+    top: 60px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-9 {
+    position: absolute;
+    width: 175px;
+    height: 40px;
+    top: 962px;
+    left: 499px;
+    background-color: #d9d9d9;
+}
+
+.trang-chu .overlap-10 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 45px;
+    background-color: #55b5db;
+}
+
+.trang-chu .text-wrapper-19 {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-group-4 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-color: #999999;
+}
+
+.trang-chu .text-wrapper-20 {
+    left: 11px;
+    position: absolute;
+    top: 9px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-11 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 89px;
+    background-color: #999999;
+}
+
+.trang-chu .text-wrapper-21 {
+    position: absolute;
+    top: 9px;
+    left: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-12 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 135px;
+    background-color: #999999;
+}
+
+.trang-chu .text-wrapper-22 {
+    left: 17px;
+    position: absolute;
+    top: 9px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .frame-4 {
+    position: absolute;
+    width: 1440px;
+    height: 864px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .overlap-13 {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    top: 159px;
+    left: 0;
+    background-image: url("{% static 'img/banner.png' %}"); /* Sử dụng static để lấy đường dẫn chính xác */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.trang-chu .overlap-14 {
+    position: absolute;
+    width: 448px;
+    height: 56px;
+    top: 97px;
+    left: 19px;
+}
+
+.trang-chu .cohoi {
+    position: absolute;
+    width: 409px;
+    top: 18px;
+    left: 0;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-23 {
+    font-family: "Arial", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+.trang-chu .NH-NG-b-c-n-b-m-o {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-family: "Arial", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .GIA-NH-m-i-HY-v-NG-m {
+    position: absolute;
+    top: 41px;
+    left: 44px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-15 {
+    position: absolute;
+    width: 95px;
+    height: 132px;
+    top: 8px;
+    left: 1287px;
+}
+
+.trang-chu .pet-commands-summon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .pet-commands-summon-2 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 87px;
+    left: 50px;
+}
+
+.trang-chu .pet-commands-summon-3 {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: 36px;
+    left: 472px;
+}
+
+.trang-chu .search-wrapper {
+    position: absolute;
+    width: 236px;
+    height: 20px;
+    top: 100px;
+    left: 1116px;
+    background-color: #eae9e9;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #e3e0e0;
+}
+
+.trang-chu .search {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    left: 214px;
+}
+
+.trang-chu .logo-wrapper {
+    position: absolute;
+    width: 102px;
+    height: 68px;
+    top: 80px;
+    left: 20px;
+    background-size: 100% 100%;
+}
+
+.trang-chu .logo {
+    position: absolute;
+    width: 102px;
+    height: 68px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .test-account {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 90px;
+    left: 1380px;
+}
+
+.trang-chu .text-wrapper-24 {
+    position: absolute;
+    top: calc(647px - 0.5cm);  /* Giảm khoảng cách xuống 0,2cm */
+    left: 201px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #605d5d;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-25 {
+    position: absolute;
+    width: 808px;
+    top: calc(692px - 0.5cm);  /* Giảm khoảng cách xuống 0,2cm */
+    left: 201px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .hinhcuutro {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 664px;
+    left: 1045px;
+}
+
+.trang-chu .group-4 {
+    position: absolute;
+    width: 205px;
+    height: 42px;
+    top: 776px;
+    left: 201px;
+}
+
+.trang-chu .overlap-group-5 {
+    position: relative;
+    width: 203px;
+    height: 42px;
+    background-color: #55b5db;
+    border-radius: 10px;
+}
+
+.trang-chu .text-wrapper-26 {
+    position: absolute;
+    top: 7px;
+    left: 34px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #f5f9fb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .group-5 {
+    position: absolute;
+    width: 1446px;
+    height: 69px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .overlap-16 {
+    position: relative;
+    width: 1440px;
+    height: 69px;
+    background-color: #429dc1;
+}
+
+.trang-chu .text-wrapper-27 {
+    position: absolute;
+    width: 87px;
+    top: 28px;
+    left: 750px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-28 {
+    position: absolute;
+    width: 169px;
+    top: 26px;
+    left: 448px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-29 {
+    position: absolute;
+    width: 251px;
+    top: 26px;
+    left: 86px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.2cm;
+}
+
+.trang-chu .map-marker-2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 19px;
+    left: 41px;
+}
+
+.trang-chu .email {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    left: 404px;
+}
+
+.trang-chu .phone {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 19px;
+    left: 705px;
+}
+
+.trang-chu .vietnam {
+    position: absolute;
+    width: 54px;
+    height: 35px;
+    top: 20px;
+    left: 1366px;
+    object-fit: cover;
+}
+.adopt-pet-link {
+    color: rgb(0, 0, 0);
+    font-size: 24px; 
+}
+.adopt-pet-link2 {
+    color: rgb(255, 255, 255);
+    font-size: 24px; 
+}
+
+.trang-chu .navbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 81px;
+    position: absolute;
+    top: 102px;
+    left: 138px;
+    font-family: Arial, sans-serif;
+    color: black;          /* Đổi màu chữ thành đen */
+    font-weight: bold;     /* Chữ in đậm */
+    text-decoration: none;
+}
+
+.trang-chu .text-wrapper-30 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-31 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.trang-chu {
+                background-color: #f4f4f4;
+                color: #333;
             }
-
-            .header-top {
-                flex-direction: column;
-                align-items: center;
+            @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
+}
+body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
             }
-
-            .hero-section {
-                height: 350px;
-                padding: 15px;
-            }
-
-            .hero-text {
-                font-size: 28px;
-            }
-
-            .paw-icon {
-                width: 40px;
-                height: 40px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Thanh điều hướng -->
-    <div class="header-top">
-        <div class="contact-info">
-            <div class="contact-item">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8106f6317fc1b9d32c55ece5a941af9832c278eb81e8e3c89494501eb2159a3?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
-                <span class="contact-text">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</span>
-            </div>
-            <div class="contact-item">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/11b40b44f10e268728c6c7dd8d59c1e73771dbd09198be2390bef99a1d6dfd88?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
-                <span class="contact-text">petshophcm@gmail.com</span>
-            </div>
-            <div class="contact-item">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3979fb3ba50193d9baab96d3727fcd5071f21dbd09198be2390bef99a1d6dfd88?placeholderIfAbsent=true&apiKey=b54ac07406754a089c70a71b88c56110" alt="" class="contact-icon" />
-                <span class="contact-text">0385900258</span>
-            </div>
+        </style>
+    </head>
+    <body>
+        <div class="trang-chu">
+            <div class="div">
+                <img class="line" src="img/line-5.svg" />
+                <img class="subtract" src="img/image.svg" />
+                <div class="frame">
+                    <img class="img" src="img/line-2.svg" />
+                    <img class="subtract-2" src="img/subtract.svg" />
+                    <div class="overlap">
+                        <img class="element-khi-nhung-doi" src="{% static 'img/anh1.png' %}" />
+                        <div class="text-wrapper">Ủng Hộ</div>
+                        <p class="p">Giúp duy trì hoạt động của PetHope qua các hình thức quyên góp hoặc nhu yếu phẩm</p>
+                    </div>
+                    <div class="overlap-group">
+                        <img class="istockphoto" src="{% static 'img/istockphoto-1254804917-612x612.png' %}" />
+                        <div class="text-wrapper-2">Nhận Nuôi</div>
+                        <p class="text-wrapper-3">Hãy nhận nuôi, tiếp nhận những bé thú cưng bị bỏ rơi</p>
+                    </div>
+                    <div class="overlap-2">
+                        <img
+    class="element-dia-diem-cuu-ho"
+    src="{% static 'img/8-dia-diem-cuu-ho-cho2c-meo-tren-toan-quoc-7c-doi-voi-dong-vat-duoc-cham-soc-suot-ngay-5flu2l.png' %}"
+/>
+                        <div class="text-wrapper-4">Tình Nguyện Viên</div>
+                        <p class="text-wrapper-5">
+                            Hành động cùng chúng tôi để có thể cứu giúp được nhiều bé thú cưng bị bỏ rơi hơn
+                        </p>
+                    </div>
+                    <div class="group">
+                        <div class="div-wrapper"><div class="text-wrapper-6">Tìm hiểu thêm</div></div>
+                    </div>
+                    <div class="overlap-wrapper">
+                        <div class="div-wrapper"><div class="text-wrapper-6">Tìm hiểu thêm</div></div>
+                    </div>
+                    <div class="overlap-group-wrapper">
+                        <div class="div-wrapper"><div class="text-wrapper-6">Tìm hiểu thêm</div></div>
+                    </div>
+                    <div class="overlap-3">
+                        <p class="text-wrapper-7">Những trái tim nhỏ đang cần được yêu thương</p>
+                        <img class="veterinarian" src="{% static 'img/veterinarian.png' %}" />
+                    </div>
+                </div>
+                <img class="veterinarian-2" src="{% static 'img/veterinarian.png' %}" />
+                <div class="text-wrapper-8">Tin Tức</div>
+                <div class="frame-2">
+                    <p class="ungho1">Bạn Đã Sẵn Sáng Giúp Đỡ Các Bé?</p>
+                    <div class="group-2">
+                        <div class="overlap-group-2"><div class="text-wrapper-9"><a href="{% url 'donate_to_fund' %}" class="adopt-pet-link2">Ủng Hộ Ngay</a></div></div>
+                    </div>
+                </div>
+                <div class="frame-3">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'img/pet-removebg-preview 1.png' %}" alt="LOGO" style="margin-top: 1cm; margin-left: 1cm;" />
+                    </a>                   
+                    <img class="facebook-circled" src="{% static 'img/Facebook Circled.png' %}" />
+<img class="gmail-logo" src="{% static 'img/Gmail Logo (1).png' %}" />
+<img class="instagram" src="{% static 'img/instagram.png' %}" />
+                    <p class="pawfund">
+                        &#34;PawFund - Nền tảng kết nối yêu thương, nơi trao hy vọng và mái ấm cho những chú thú cưng bị bỏ rơi. Hãy
+                        chung tay cùng chúng tôi để mang đến một cuộc sống tốt đẹp hơn cho các bé!&#34;
+                    </p>
+                    <p class="text-wrapper-10">Mọi chi tiết thắc mắc xin liên hệ fanpage dưới đây</p>
+                    <div class="overlap-4">
+                        <a href="https://www.facebook.com/doclashoppe" target="_blank">
+                            <img class="element-opinion" src="{% static 'img/20210310-opinion-logo-01-1617276246909.png' %}" alt="Facebook Link" />
+                        </a>
+<img class="pet-removebg-preview-2" src="{% static 'img/pet-removebg-preview.png' %}" />
+                    </div>
+                    <img class="call" src="{% static 'img/Call.png' %}" />
+                    <p class="th-ng-tin-li-n-h">
+                        <span class="span">Thông tin liên hệ<br />0389590258<br /></span>
+                        <a href="mailto:pethope@gmail.com" target="_blank" rel="noopener noreferrer"
+                            ><span class="span">pethope@gmail.com<br /></span
+                        ></a>
+                        <a
+                            href="https://www.google.com/maps/place/70+%C4%90.+T%C3%B4+K%C3%BD,+T%C3%A2n+Ch%C3%A1nh+Hi%E1%BB%87p,+Qu%E1%BA%ADn+12,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.8651819,106.6138109,1013m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31752a10b0f0554f:0x769800e8967d6703!8m2!3d10.8651766!4d106.6163858!16s%2Fg%2F11sndzfkbw?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><span class="span">Q12, Thành phố Hồ Chí Minh</span></a>
+                    </p>
+                    <img class="map-marker" src="{% static 'img/Map Marker.png' %}" />
+<img class="gmail-logo-2" src="{% static 'img/Gmail Logo.png' %}" />
+<img class="line-2" src="{% static 'img/line-6.svg' %}" />
+                </div>
+                <div class="nhn-nui">
+                    <div class="overlap-5">
+                        <div class="khung-nhn-nui"></div>
+                        <img class="hnh-mo-mt" src="{% static 'img/mit.png' %}" />
+<img class="hnh-ch-u-u" src="{% static 'img/den.png' %}" />
+<img class="hnh-mo-cam" src="{% static 'img/cam.png' %}" />
+                        <p class="t-n-m-t-gi-i-t-nh-c">
+                            <span class="text-wrapper-11">Tên:</span>
+                            <span class="text-wrapper-12"> Mít<br /></span>
+                            <span class="text-wrapper-13">Giới tính:</span>
+                            <span class="text-wrapper-12"> Cái<br /></span>
+                            <span class="text-wrapper-13">Tuổi:</span>
+                            <span class="text-wrapper-12"> 1 tháng<br /></span>
+                            <span class="text-wrapper-13">Tiêm Phòng:</span>
+                            <span class="text-wrapper-12"> Có<br /></span>
+                            <span class="text-wrapper-13">Tính Cách:</span>
+                            <span class="text-wrapper-12"> nhát người, ham ngủ</span>
+                        </p>
+                        <p class="t-n-u-u-gi-i-t-nh-c">
+                            <span class="text-wrapper-14">Tên:</span>
+                            <span class="text-wrapper-12"> Đậu Đậu<br /></span>
+                            <span class="text-wrapper-14">Giới tính:</span>
+                            <span class="text-wrapper-12"> Đực<br /></span>
+                            <span class="text-wrapper-14">Tuổi: </span>
+                            <span class="text-wrapper-12">1,5 tháng<br /></span>
+                            <span class="text-wrapper-14">Tiêm Phòng: </span>
+                            <span class="text-wrapper-12">Có<br /></span>
+                            <span class="text-wrapper-14">Tính Cách:</span>
+                            <span class="text-wrapper-12"> ngoan, bám chủ</span>
+                        </p>
+                        <p class="t-n-cam-gi-i-t-nh-c">
+                            <span class="text-wrapper-14">Tên:</span>
+                            <span class="text-wrapper-12"> Cam<br /></span>
+                            <span class="text-wrapper-14">Giới tính:</span>
+                            <span class="text-wrapper-12"> Đực<br /></span>
+                            <span class="text-wrapper-14">Tuổi:</span>
+                            <span class="text-wrapper-12"> 1 năm<br /></span>
+                            <span class="text-wrapper-14">Tiêm Phòng:</span>
+                            <span class="text-wrapper-12"> Chưa rõ <br /></span>
+                            <span class="text-wrapper-14">Tính Cách:</span>
+                            <span class="text-wrapper-12"> năng động, thích chơi với bông len</span>
+                        </p>
+                        <img class="next" src="{% static 'img/next.png' %}" />
+<img class="previous" src="{% static 'img/previous.png' %}" />
+<!-- Nút Xem thêm thú cưng -->
+<div class="group3">
+    <div class="overlap-group-3">
+        <div class="text1">
+            <a href="{% url 'view_pets' %}" class="adopt-pet-link2">Xem thêm thú cưng</a>
         </div>
     </div>
+</div>
 
-    <!-- Menu điều hướng -->
-    <div class="nav-links">
-        <a href="{% url 'add_pet' %}">Thêm thú cưng</a>
-        <a href="{% url 'view_pets' %}">Xem thú cưng</a>
-        <a href="{% url 'view_fund_balance' %}">Xem quỹ</a>
-        <a href="{% url 'donate_to_fund' %}">Đóng quỹ</a>
-        <a href="{% url 'adopt_pet' %}">Nhận nuôi</a>
-
-        {% if request.session.user_id %}
-            <div class="user-actions">
-                <span class="user-info">Xin chào, {{ user.username }}</span>
-                <a href="{% url 'logout' %}" class="logout-btn">Đăng xuất</a>
-            </div>
-        {% else %}
-            <div class="user-actions">
-                <a href="{% url 'register_user' %}">Đăng ký</a>
-                <a href="{% url 'login_user' %}">Đăng nhập</a>
-            </div>
-        {% endif %}
-    </div>
-
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div>
-            <div class="hero-text">GIA ĐÌNH MỚI - HY VỌNG MỚI</div>
-            <div class="paw-icon"></div>
-            <div class="middle-text">NHỮNG BÉ CÚN, BÉ MÈO ĐANG CHỜ ĐƯỢC NHẬN NUÔI</div>
-            <div class="bottom-text">Mong các bạn hãy cho các bé một cơ hội! <br>Trở thành một thành viên trong gia đình của mình.</div>
+<!-- Nút Nhận nuôi (code gốc) -->
+<div class="group1">
+    <div class="overlap-group-3">
+        <div class="text-wrapper-15">
+            <a href="{% url 'adopt_pet' %}" class="adopt-pet-link2">Nhận nuôi</a>
         </div>
     </div>
+</div>
 
-    <footer>
-        &copy; 2025 Hệ thống quản lý thú cưng. All rights reserved.
-    </footer>
-</body>
+<!-- Nút Tặng thú cưng -->
+<div class="group2">
+    <div class="overlap-group-3">
+        <div class="text2">
+            <a href="{% url 'add_pet' %}" class="adopt-pet-link2">Tặng thú cưng</a>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+                <div class="tin-tc">
+                    <div class="overlap-6">
+                        <a href="https://kenh14.vn/la-cool/chu-meo-cuop-bien-tu-tre-co-nho-tro-thanh-hot-boy-phien-ban-dong-vat-20151225135131504.chn" target="_blank">
+                            <img class="element" src="{% static 'img/151225lcmeo44-1451025472895.png' %}" alt="Chú mèo cướp biển" />
+                            <p class="ch-m-o-c-p-bi-n-t-tr">
+                                Chú mèo cướp biển: Từ &#34;trẻ cơ nhỡ&#34; trở thành hot boy phiên bản động vật
+                            </p>
+                        </a>
+                        
+                        <p class="text-wrapper-16">
+                            Sau bao tháng ngày bị bỏ rơi, cuối cùng chú mèo chột mắt cũng tìm thấy tổ ấm thực sự của mình tại thành
+                            phố Fairfield, bang California, Mỹ...
+                        </p>
+                    </div>
+                    <div class="overlap-7">
+                        <a href="https://dantri.com.vn/ban-doc/thu-cung-lam-benh-nhieu-ong-chu-hay-sen-chay-tron-20230603174913501.htm" target="_blank">
+                            <img class="img-2" src="{% static 'img/z4401450060340cc18dc486c9b73a6aa95de1819a9fd08-1685788951047.png' %}" alt="Thú cưng lâm bệnh" />
+                            <p class="th-c-ng-l-m-b-nh-nhi">
+                                Thú cưng lâm bệnh, nhiều ông chủ hay &#34;sen&#34;... chạy trốn
+                            </p>
+                        </a>                      
+                        <p class="ng-i-y-u-c-th-kh-ng">
+                             &#34;Người yêu có thể không có nhưng chó phải có một con&#34;, nhiều bạn trẻ nói vui rằng, nuôi thú cưng
+                            còn thú vị hơn có người yêu. Thế nhưng, trong nhiều trường hợp, thú cưng vẫn rất dễ bị &#34;thất
+                            sủng&#34;...
+                        </p>
+                    </div>
+                    <div class="overlap-8">
+                        <a href="https://thanhnien.vn/nhom-ban-tre-lap-tram-phuc-hoi-tinh-than-cho-cho-o-viet-nam-1851252875.htm" target="_blank">
+                            <img class="GHPN" src="{% static 'img/dsc04813_GHPN.png' %}" />
+                            <p class="text-wrapper-17">Nhóm bạn trẻ lập trạm phục hồi tinh thần cho chó ở Việt Nam</p>
+                        </a>                                             
+                        <p class="text-wrapper-18">
+                            Mô hình phục hồi tinh thần cho động vật gặp tình cảnh không may này do 2 bạn trẻ nước ngoài và 1 bạn Việt
+                            Nam khởi động tại Việt Nam, xuất phát từ cơ duyên tìm được người bạn thú đồng hành cách đây 4 năm...
+                        </p>
+                    </div>
+                    <div class="overlap-9">
+                        <div class="overlap-10"><div class="text-wrapper-19">1</div></div>
+                        <div class="overlap-group-4"><div class="text-wrapper-20">&lt;</div></div>
+                        <div class="overlap-11"><div class="text-wrapper-21">2</div></div>
+                        <div class="overlap-12"><div class="text-wrapper-22">&gt;</div></div>
+                    </div>
+                </div>
+                <div class="frame-4">
+                    <div class="overlap-13">
+                        <div class="overlap-14">
+                            <p class="cohoi">
+                                <span class="text-wrapper-23">Mong </span>
+                                <span class="text-wrapper-23"
+                                    >các bạn hãy cho các bé một cơ hội! <br />Trở thành một thành viên trong gia đình của mình.</span
+                                >
+                            </p>
+                            <p class="NH-NG-b-c-n-b-m-o">Những Bé Cún, Bé Mèo Đang Chờ Được Nhận Nuôi</p>
+                        </div>
+                        <p class="GIA-NH-m-i-HY-v-NG-m">GIA ĐÌNH MỚI -&nbsp;&nbsp;HY VỌNG MỚI</p>
+                        <div class="overlap-15">
+                            <img class="pet-commands-summon" src="{% static 'img/pet-commands-summon-2.png' %}" />
+                            <img class="pet-commands-summon-2" src="{% static 'img/pet-commands-summon.png' %}" />
+                        </div>
+                        <img class="pet-commands-summon-3" src="{% static 'img/veterinarian2.png' %}" />
+                    </div>
+                    <div class="search-wrapper">
+                        <img class="search" src="{% static 'img/Search.png' %}" />
+                    </div>
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'img/pet-removebg-preview 1.png' %}" alt="LOGO" style="margin-top: 2cm; width: 10%;" />
+                    </a>
+                    
+                    </a> 
+                    <a href="{% url 'register_user' %}">
+                        <img class="test-account" src="{% static 'img/Test Account.png' %}" alt="ANH DANG NHAP" />
+                    </a>
+                    <p class="text-wrapper-24">CỨU TRỢ - NHẬN NUÔI THÚ CƯNG PET HOPE</p>
+                    <p class="text-wrapper-25">
+                        PetHouse là một nền tảng kết nối những trái tim yêu thương dành cho thú cưng, hoạt động vì mục tiêu cứu trợ
+                        và tạo điều kiện nhận nuôi cho những chú chó, mèo bị bỏ rơi hoặc cần sự giúp đỡ. Chúng tôi tin rằng, dù các
+                        bé có từng bị bỏ rơi, bạo hành hay tàn tật, tất cả đều xứng đáng có một cơ hội để hy vọng vào một tương lai
+                        tốt đẹp hơn.
+                    </p>
+                    <img class="hinhcuutro" src="{% static 'img/hinhcuutro.png' %}" />
+                    <div class="group-4">
+                        <div class="overlap-group-5"><div class="text-wrapper-26"><a href="{% url 'about_us' %}" class="adopt-pet-link2">Về chúng tôi</a></div></div>
+                    </div>
+                    <div class="group-5">
+                        <div class="overlap-16">
+                            <div class="text-wrapper-27">0389590258</div>
+                            <div class="text-wrapper-28">pethopehcm@gmail.com</div>
+                            <p class="text-wrapper-29">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</p>
+                            <img class="map-marker-2" src="{% static 'img/mapxanh.png' %}" />
+                            <img class="email" src="{% static 'img/email.png' %}" />
+                            <img class="phone" src="{% static 'img/phone.png' %}" />
+                            <img class="vietnam" src="{% static 'img/vietnam 1.png' %}" />
+                        </div>
+                    </div>
+                    <div class="navbar">
+                        <a href="{% url 'home' %}" class="adopt-pet-link">Trang chủ</a>
+                        <div class="adopt-group">
+                            <a href="{% url 'adopt_pet' %}" class="adopt-pet-link">Nhận nuôi</a>
+    </div>
+    <a href="{% url 'view_fund_balance' %}" class="adopt-pet-link">Xem quỹ</a>
+    <a href="{% url 'donate_to_fund' %}" class="adopt-pet-link">Đóng quỹ</a>
+    <a href="{% url 'news' %}" class="adopt-pet-link">Tin Tức</a>
+
+                        <a href="{% url 'about_us' %}" class="adopt-pet-link">Về chúng tôi</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
-    
