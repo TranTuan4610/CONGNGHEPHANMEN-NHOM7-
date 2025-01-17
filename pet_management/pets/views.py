@@ -120,3 +120,13 @@ def logout_user(request):
     request.session.flush()
     messages.success(request, "Đăng xuất thành công.")
     return redirect('home')
+from django.shortcuts import render
+
+from django.shortcuts import render
+
+def about_us(request):
+    return render(request, 'about_us.html')
+
+def news(request):
+    return render(request, 'news.html')
+    
