@@ -101,13 +101,20 @@
     <div class="form-container">
         <h1>Thêm thú cưng</h1>
         <form method="post">
-            {% csrf_token %}
             <label for="name">Tên thú cưng:</label>
             <input type="text" id="name" name="name" required>
 
             <label for="species">Loài thú cưng:</label>
             <input type="text" id="species" name="species" required>
 
+            <label for="age">Độ tuổi:</label>      
+            <input type="text" id="age" name="age" required>
+
+            <label for="sex">Giới tính:</label>
+            <input type="text" id="sex" name="sex" required>
+
+            <label for="health">Tình trạng sức khỏe:</label>
+            `<input type="text" id="health" name="health" required>`
             <button type="submit">Thêm thú cưng</button>
         </form>
     </div>
