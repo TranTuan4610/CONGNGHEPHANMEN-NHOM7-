@@ -1,6 +1,1340 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+        <meta charset="utf-8" />
+        <style>
+.trang-chu {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.trang-chu .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 3772px;
+    position: relative;
+}
+
+.trang-chu .line {
+    width: 960px;
+    top: 3130px;
+    left: 240px;
+    position: absolute;
+    height: 1px;
+    object-fit: cover;
+}
+
+.trang-chu .subtract {
+    position: absolute;
+    width: 314px;
+    height: 12px;
+    top: 3133px;
+    left: 563px;
+}
+
+.trang-chu .frame {
+    position: absolute;
+    width: 1044px;
+    height: 454px;
+    top: 915px;
+    left: 201px;
+}
+
+.trang-chu .img {
+    width: 960px;
+    top: 363px;
+    left: 39px;
+    position: absolute;
+    height: 1px;
+    object-fit: cover;
+}
+
+.trang-chu .subtract-2 {
+    position: absolute;
+    width: 314px;
+    height: 12px;
+    top: 366px;
+    left: 362px;
+}
+
+.trang-chu .overlap {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    background-color: #eaf3fd;
+    border-radius: 15px;
+}
+
+.trang-chu .element-khi-nhung-doi {
+    position: absolute;
+    width: 167px;
+    height: 131px;
+    top: 3px;
+    left: 57px;
+    object-fit: cover;
+}
+
+.trang-chu .text-wrapper {
+    position: absolute;
+    top: 149px;
+    left: 100px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #999999;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .p {
+    position: absolute;
+    width: 220px;
+    top: 194px;
+    left: 30px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-group {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 381px;
+    background-color: #eaf3fd;
+    border-radius: 15px;
+}
+
+.trang-chu .istockphoto {
+    position: absolute;
+    width: 167px;
+    height: 131px;
+    top: 8px;
+    left: 63px;
+    object-fit: cover;
+}
+
+.trang-chu .text-wrapper-2 {
+    position: absolute;
+    top: 155px;
+    left: 90px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #999999;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-3 {
+    position: absolute;
+    width: 220px;
+    top: 199px;
+    left: 36px;
+    font-family: "RArialr", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-2 {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 764px;
+    background-color: #eaf3fd;
+    border-radius: 15px;
+}
+
+.trang-chu .element-dia-diem-cuu-ho {
+    position: absolute;
+    width: 167px;
+    height: 131px;
+    top: 6px;
+    left: 56px;
+}
+
+.trang-chu .text-wrapper-4 {
+    position: absolute;
+    top: 152px;
+    left: 44px;
+    font-family: "Ariald", sans-serif;
+    font-weight: 700;
+    color: #999999;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-5 {
+    position: absolute;
+    width: 220px;
+    top: 197px;
+    left: 29px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .group {
+    position: absolute;
+    width: 226px;
+    height: 27px;
+    top: 297px;
+    left: 23px;
+}
+
+.trang-chu .div-wrapper {
+    position: relative;
+    width: 224px;
+    height: 27px;
+    background-color: #55b5db;
+    border-radius: 10px;
+}
+
+.trang-chu .text-wrapper-6 {
+    position: absolute;
+    top: 4px;
+    left: 61px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #f6fafb;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-wrapper {
+    position: absolute;
+    width: 226px;
+    height: 27px;
+    top: 299px;
+    left: 409px;
+}
+
+.trang-chu .overlap-group-wrapper {
+    position: absolute;
+    width: 226px;
+    height: 27px;
+    top: 298px;
+    left: 792px;
+}
+
+.trang-chu .overlap-3 {
+    position: absolute;
+    width: 496px;
+    height: 71px;
+    top: 382px;
+    left: 273px;
+}
+
+.trang-chu .text-wrapper-7 {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .veterinarian {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    left: 223px;
+}
+
+.trang-chu .veterinarian-2 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 2072px;
+    left: 699px;
+}
+
+.trang-chu .text-wrapper-8 {
+    position: absolute;
+    top: 2040px;
+    left: 679px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .frame-2 {
+    position: absolute;
+    width: 1440px;
+    height: 150px;
+    top: 3189px;
+    left: 0;
+    background-color: #55b5db;
+}
+
+.trang-chu .ungho1 {
+    position: absolute;
+    top: 60px;
+    left: 139px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .group-2 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 42px;
+    left: 964px;
+}
+
+.trang-chu .overlap-group-2 {
+    position: relative;
+    width: 220px;
+    height: 65px;
+    border-radius: 10px;
+    background: linear-gradient(
+        180deg,
+        rgb(202.16, 221.87, 253.58) 0%,
+        rgb(57.02, 149.41, 255) 100%
+    );
+}
+
+.trang-chu .text-wrapper-9 {
+    position: absolute;
+    top: 19px;
+    left: 39px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .frame-3 {
+    position: absolute;
+    width: 1440px;
+    height: 363px;
+    top: 3409px;
+    left: 0;
+    background: linear-gradient(
+        180deg,
+        rgb(214.63, 228.67, 251.27) 0%,
+        rgb(85, 181, 219) 100%
+    );
+}
+
+.trang-chu .pet-removebg-preview {
+    position: absolute;
+    width: 236px;
+    height: 140px;
+    top: 56px;
+    left: 19px;
+}
+
+.trang-chu .facebook-circled {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 196px;
+    left: 44px;
+}
+
+.trang-chu .gmail-logo {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 196px;
+    left: 114px;
+}
+
+.trang-chu .instagram {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 198px;
+    left: 184px;
+}
+
+.trang-chu .pawfund {
+    position: absolute;
+    width: 527px;
+    top: 20px;  /* Giảm giá trị top xuống 1cm */
+    left: 306px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #787777;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+
+.trang-chu .text-wrapper-10 {
+    position: absolute;
+    top: 79px;
+    left: 870px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #787777;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-4 {
+    position: absolute;
+    width: 540px;
+    height: 128px;
+    top: 118px;
+    left: 880px;
+}
+
+.trang-chu .element-opinion {
+    position: absolute;
+    width: 540px;
+    height: 124px;
+    top: 37.8px; /* Điều chỉnh top xuống 1 cm */
+    left: 0;
+    object-fit: cover;
+}
+
+.trang-chu .pet-removebg-preview-2 {
+    position: absolute;
+    width: 194px;
+    height: 125px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.trang-chu .call {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 232px;
+    left: 324px;
+}
+
+.trang-chu .th-ng-tin-li-n-h {
+    position: absolute;
+    width: 362px;
+    top: 209px;
+    left: 358px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .span {
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #787777;
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+.trang-chu .map-marker {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 292px;
+    left: 324px;
+}
+
+.trang-chu .gmail-logo-2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 262px;
+    left: 324px;
+}
+
+.trang-chu .line-2 {
+    width: 338px;
+    top: 271px;
+    left: 963px;
+    position: absolute;
+    height: 1px;
+    object-fit: cover;
+}
+
+.trang-chu .nhn-nui {
+    position: absolute;
+    width: 1197px;
+    height: 540px;
+    top: 1403px;
+    left: 121px;
+}
+
+.trang-chu .overlap-5 {
+    position: relative;
+    height: 540px;
+}
+
+.trang-chu .khung-nhn-nui {
+    position: absolute;
+    width: 1196px;
+    height: 540px;
+    top: 0;
+    left: 1px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .hnh-mo-mt {
+    left: 83px;
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 26px;
+    object-fit: cover;
+}
+
+.trang-chu .hnh-ch-u-u {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 26px;
+    left: 478px;
+    object-fit: cover;
+}
+
+.trang-chu .hnh-mo-cam {
+    left: 873px;
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 26px;
+    object-fit: cover;
+}
+
+.trang-chu .t-n-m-t-gi-i-t-nh-c {
+    position: absolute;
+    width: 241px;
+    top: 304px;
+    left: 83px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-11 {
+    font-weight: 600;
+}
+
+.trang-chu .text-wrapper-12 {
+    font-family: "Arial", sans-serif;
+}
+
+.trang-chu .text-wrapper-13 {
+    font-family: "Arial", sans-serif;
+    font-weight: 500;
+}
+
+.trang-chu .t-n-u-u-gi-i-t-nh-c {
+    position: absolute;
+    width: 224px;
+    top: 309px;
+    left: 478px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-14 {
+    font-weight: 500;
+}
+
+.trang-chu .t-n-cam-gi-i-t-nh-c {
+    position: absolute;
+    width: 224px;
+    top: 309px;
+    left: 873px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 232px;
+    left: 1137px;
+}
+
+.trang-chu .previous {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 232px;
+    left: 0;
+}
+
+.trang-chu .group-3 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 445px;
+    left: 496px;
+}
+
+.trang-chu .group1 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 445px;
+    left: 496px;
+} 
+
+.trang-chu .group2 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 446px;
+    left: 891px;
+}
+
+.trang-chu .group3 {
+    position: absolute;
+    width: 222px;
+    height: 65px;
+    top: 445px;
+    left: 101px;
+}
+
+.trang-chu .overlap-group-3 {
+    position: relative;
+    width: 250px;
+    height: 70px;
+    background-color: #55b5db;
+    border-radius: 15px;
+    left: -20px;
+}
+
+.trang-chu .text1 {
+    position: absolute;
+    top: 21px;
+    left: calc(5px + 11.34px);
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text2 {
+    position: absolute;
+    top: 19px;
+    left: 39px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text3 {
+    position: absolute;
+    top: 20px;
+    left: 53px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+
+.trang-chu .text-wrapper-15 {
+    position: absolute;
+    top: 20px;
+    left: 53px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .tin-tc {
+    position: absolute;
+    width: 1168px;
+    height: 1002px;
+    top: 2117px;
+    left: 134px;
+}
+
+.trang-chu .overlap-6 {
+    position: absolute;
+    width: 1164px;
+    height: 288px;
+    top: 0;
+    left: 0;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .element {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 15px;
+    left: 71px;
+}
+
+.trang-chu .ch-m-o-c-p-bi-n-t-tr {
+    position: absolute;
+    top: 14px;
+    left: 359px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-16 {
+    position: absolute;
+    width: 454px;
+    top: 59px;
+    left: 359px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-7 {
+    position: absolute;
+    width: 1164px;
+    height: 288px;
+    top: 307px;
+    left: 4px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .img-2 {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 23px;
+    left: 67px;
+}
+
+.trang-chu .th-c-ng-l-m-b-nh-nhi {
+    position: absolute;
+    top: 22px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .ng-i-y-u-c-th-kh-ng {
+    position: absolute;
+    width: 454px;
+    top: 67px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-8 {
+    position: absolute;
+    width: 1164px;
+    height: 288px;
+    top: 629px;
+    left: 4px;
+    background-color: #fdfdfd;
+    box-shadow: 0px 4px 4px #00000040;
+}
+
+.trang-chu .GHPN {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    top: 16px;
+    left: 67px;
+    object-fit: cover;
+}
+
+.trang-chu .text-wrapper-17 {
+    position: absolute;
+    top: 15px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-18 {
+    position: absolute;
+    width: 454px;
+    top: 60px;
+    left: 357px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .overlap-9 {
+    position: absolute;
+    width: 175px;
+    height: 40px;
+    top: 962px;
+    left: 499px;
+    background-color: #d9d9d9;
+}
+
+.trang-chu .overlap-10 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 45px;
+    background-color: #55b5db;
+}
+
+.trang-chu .text-wrapper-19 {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-group-4 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-color: #999999;
+}
+
+.trang-chu .text-wrapper-20 {
+    left: 11px;
+    position: absolute;
+    top: 9px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-11 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 89px;
+    background-color: #999999;
+}
+
+.trang-chu .text-wrapper-21 {
+    position: absolute;
+    top: 9px;
+    left: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-12 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 135px;
+    background-color: #999999;
+}
+
+.trang-chu .text-wrapper-22 {
+    left: 17px;
+    position: absolute;
+    top: 9px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .frame-4 {
+    position: absolute;
+    width: 1440px;
+    height: 864px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .overlap-13 {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    top: 159px;
+    left: 0;
+    background-image: url("{% static 'img/banner.png' %}"); /* Sử dụng static để lấy đường dẫn chính xác */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.trang-chu .overlap-14 {
+    position: absolute;
+    width: 448px;
+    height: 56px;
+    top: 97px;
+    left: 19px;
+}
+
+.trang-chu .cohoi {
+    position: absolute;
+    width: 409px;
+    top: 18px;
+    left: 0;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-23 {
+    font-family: "Arial", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+.trang-chu .NH-NG-b-c-n-b-m-o {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-family: "Arial", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .GIA-NH-m-i-HY-v-NG-m {
+    position: absolute;
+    top: 41px;
+    left: 44px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .overlap-15 {
+    position: absolute;
+    width: 95px;
+    height: 132px;
+    top: 8px;
+    left: 1287px;
+}
+
+.trang-chu .pet-commands-summon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .pet-commands-summon-2 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 87px;
+    left: 50px;
+}
+
+.trang-chu .pet-commands-summon-3 {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: 36px;
+    left: 472px;
+}
+
+.trang-chu .search-wrapper {
+    position: absolute;
+    width: 236px;
+    height: 20px;
+    top: 100px;
+    left: 1116px;
+    background-color: #eae9e9;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #e3e0e0;
+}
+
+.trang-chu .search {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    left: 214px;
+}
+
+.trang-chu .logo-wrapper {
+    position: absolute;
+    width: 102px;
+    height: 68px;
+    top: 80px;
+    left: 20px;
+    background-size: 100% 100%;
+}
+
+.trang-chu .logo {
+    position: absolute;
+    width: 102px;
+    height: 68px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .test-account {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 90px;
+    left: 1380px;
+}
+
+.trang-chu .text-wrapper-24 {
+    position: absolute;
+    top: calc(647px - 0.5cm);  /* Giảm khoảng cách xuống 0,2cm */
+    left: 201px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #605d5d;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-25 {
+    position: absolute;
+    width: 808px;
+    top: calc(692px - 0.5cm);  /* Giảm khoảng cách xuống 0,2cm */
+    left: 201px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .hinhcuutro {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 664px;
+    left: 1045px;
+}
+
+.trang-chu .group-4 {
+    position: absolute;
+    width: 205px;
+    height: 42px;
+    top: 776px;
+    left: 201px;
+}
+
+.trang-chu .overlap-group-5 {
+    position: relative;
+    width: 203px;
+    height: 42px;
+    background-color: #55b5db;
+    border-radius: 10px;
+}
+
+.trang-chu .text-wrapper-26 {
+    position: absolute;
+    top: 7px;
+    left: 34px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color: #f5f9fb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .group-5 {
+    position: absolute;
+    width: 1446px;
+    height: 69px;
+    top: 0;
+    left: 0;
+}
+
+.trang-chu .overlap-16 {
+    position: relative;
+    width: 1440px;
+    height: 69px;
+    background-color: #429dc1;
+}
+
+.trang-chu .text-wrapper-27 {
+    position: absolute;
+    width: 87px;
+    top: 28px;
+    left: 750px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-28 {
+    position: absolute;
+    width: 169px;
+    top: 26px;
+    left: 448px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.trang-chu .text-wrapper-29 {
+    position: absolute;
+    width: 251px;
+    top: 26px;
+    left: 86px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.2cm;
+}
+
+.trang-chu .map-marker-2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 19px;
+    left: 41px;
+}
+
+.trang-chu .email {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    left: 404px;
+}
+
+.trang-chu .phone {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 19px;
+    left: 705px;
+}
+
+.trang-chu .vietnam {
+    position: absolute;
+    width: 54px;
+    height: 35px;
+    top: 20px;
+    left: 1366px;
+    object-fit: cover;
+}
+.adopt-pet-link {
+    color: rgb(0, 0, 0);
+    font-size: 24px; 
+}
+.adopt-pet-link2 {
+    color: rgb(255, 255, 255);
+    font-size: 24px; 
+}
+
+.trang-chu .navbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 81px;
+    position: absolute;
+    top: 102px;
+    left: 138px;
+    font-family: Arial, sans-serif;
+    color: black;          /* Đổi màu chữ thành đen */
+    font-weight: bold;     /* Chữ in đậm */
+    text-decoration: none;
+}
+
+.trang-chu .text-wrapper-30 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.trang-chu .text-wrapper-31 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #787777;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.trang-chu {
+                background-color: #f4f4f4;
+                color: #333;
+            }
+            @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
+}
+body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+        </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhận thú cưng</title>
@@ -87,27 +1421,217 @@
     </style>
 </head>
 <body>
-    <h1>Nhận thú cưng</h1>
-    
-    <div class="form-container">
-        {% if pets %}
-            <form method="post">
-                {% csrf_token %}
-                <label for="pet_id">Chọn thú cưng:</label>
+    <div style="width: 100%; height: 100%; position: relative; background: white">
+        <div style="width: 1440px; height: 61px; left: 0px; top: 0px; position: absolute">
+            <div style="width: 1440px; height: 61px; left: 0px; top: 0px; position: absolute; background: #439EC2"></div>
+            <div style="width: 87.06px; height: 15.91px; left: 749.52px; top: 24.75px; position: absolute; color: white; font-size: 15px; font-family: Roboto; font-weight: 700; word-wrap: break-word">0389590258</div>
+            <div style="width: 169.12px; height: 15.91px; left: 448.31px; top: 22.99px; position: absolute; color: white; font-size: 15px; font-family: Roboto; font-weight: 700; word-wrap: break-word">pethopehcm@gmail.com</div>
+            <div style="width: 251.17px; height: 15.91px; left: 86.06px; top: 22.99px; position: absolute; color: white; font-size: 15px; font-family: Roboto; font-weight: 700; word-wrap: break-word">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</div>
+            <img style="width: 30.02px; height: 26.52px; left: 41.03px; top: 16.80px; position: absolute" src="{% static 'img/mapxanh.png' %}" />
+            <img style="width: 30.02px; height: 26.52px; left: 404.28px; top: 17.68px; position: absolute" src="{% static 'img/email.png' %}" />
+            <img style="width: 30.02px; height: 26.52px; left: 705.49px; top: 16.80px; position: absolute" src="{% static 'img/phone.png' %}" />
+            <img style="width: 55.04px; height: 30.94px; left: 1365.95px; top: 17.68px; position: absolute" src="{% static 'img/vietnam 1.png' %}" />
+        </div>
+        <img style="width: 102px; height: 68px; left: 20px; top: 86px; position: absolute" src="{% static 'img/pet-removebg-preview.png' %}" />
+        <div style="left: 257px; top: 108px; position: absolute; justify-content: flex-start; align-items: center; gap: 81px; display: inline-flex">
+            <div style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 700; word-wrap: break-word">TRANG CHỦ</div>
+            <div style="color: black; font-size: 16px; font-family: Roboto; font-weight: 700; word-wrap: break-word">NHẬN NUÔI</div>
+            <div style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 700; word-wrap: break-word">ỦNG HỘ - ĐÓNG GÓP</div>
+            <div style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 700; word-wrap: break-word">TIN TỨC - SỰ KIỆN</div>
+            <div style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 700; word-wrap: break-word">VỀ CHÚNG TÔI</div>
+        </div>
+        <img style="width: 726px; height: 184px; left: 0px; top: 171px; position: absolute" src="{% static 'img/Bia726.png' %}" />
+        <img style="width: 712px; height: 184px; left: 728px; top: 171px; position: absolute" src="{% static 'img/bia712.png' %}" />
+        <div style="left: 20px; top: 399px; position: absolute; color: #797777; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Quy trình nhận nuôi</div>
+        <div style="width: 960px; height: 0px; left: 240px; top: 1157.06px; position: absolute; border: 1px #F5F5F5 solid"></div>
+        <img style="width: 314.38px; height: 11.52px; left: 563px; top: 1158.98px; position: absolute" src="https://via.placeholder.com/314x12" />
+        <img style="width: 45px; height: 43px; left: 700px; top: 1189px; position: absolute" src="{% static 'img/CatFootportant.png' %}" />
+        <div style="width: 203px; height: 26px; left: 621px; top: 1263px; position: absolute; color: #797777; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Tìm kiếm thú cưng</div>
+        <div style="width: 124px; height: 23px; left: 1470px; top: 2157px; position: absolute; color: #797777; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Đã triệt sản</div>
+        <div style="width: 157px; height: 23px; left: 1466px; top: 2123px; position: absolute; color: #797777; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Đã tiêm phòng</div>
+        <div style="width: 1016px; height: 62px; left: 84px; top: 1049px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Hỗ trợ khác từ PetHope:<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Nhận nuôi tạm thời (Foster): Nếu bạn chỉ có thể chăm sóc bé trong thời gian ngắn, hãy tìm hiểu thêm về chương trình "Tình nguyện Foster."<br/>Nhận nuôi Ảo: Xem chi tiết chương trình hỗ trợ tài chính cho các bé không thể nhận nuôi tại mục "Nhận nuôi Ảo."<br/></span></div>
+        <div style="width: 644px; left: 84px; top: 562px; position: absolute; color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tìm kiếm và lọc thú cưng: Duyệt qua danh sách các bé thú cưng đang cần mái ấm trên website PetHope sao cho đảm bảo phù hợp với điều kiện sống cũng như sở thích của bạn.</div>
+        <div style="width: 644px; left: 84px; top: 616px; position: absolute; color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Liên hệ tình nguyện viên phụ trách: Mỗi bé sẽ có một tình nguyện viên phụ trách. Hãy liên hệ trực tiếp để tìm hiểu thêm về tính cách, sức khỏe, và nhu cầu đặc biệt (nếu có) của bé.</div>
+        <div style="width: 644px; left: 81px; top: 680px; position: absolute; color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tham gia phỏng vấn nhận nuôi: Hoàn thành đơn đăng ký nhận nuôi online trên trang web. Sau đó tham gia buổi phỏng vấn nhận nuôi (trực tiếp hoặc trực tuyến). Buổi phỏng vấn sẽ giúp đảm bảo rằng bé thú cưng được trao cho một mái ấm phù hợp và lâu dài.</div>
+        <div style="width: 644px; left: 82px; top: 759px; position: absolute; color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Chuẩn bị cơ sở vật chất và ký giấy tờ: Đảm bảo bạn đã chuẩn bị đầy đủ nơi ở phù hợp cho bé (chuồng, đồ chơi, thức ăn, v.v.) đồng thời ký cam kết nhận nuôi và đóng khoản phí hỗ trợ y tế.</div>
+        <div style="width: 644px; left: 81px; top: 840px; position: absolute; color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word"> Đón bé về nhà và cập nhật tình hình: Sau khi hoàn tất thủ tục, bạn sẽ đón bé về mái ấm mới. Thường xuyên cập nhật tình trạng của bé cho PetHope, đặc biệt trong giai đoạn đầu để được tư vấn và hỗ trợ kịp thời khi cần.</div>
+        <div style="width: 644px; left: 84px; top: 930px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Lưu ý quan trọng:<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Liên hệ đúng cách: Chỉ inbox tình nguyện viên phụ trách bé, không nhắn tin hàng loạt. Nếu không nhận được phản hồi trong 24 giờ, hãy liên hệ trực tiếp qua Page chính thức.<br/>Khi không nuôi được tiếp: Nếu có lý do không thể tiếp tục nuôi, bạn phải liên hệ để trả bé về cho tổ chức. Tuyệt đối không tự ý trao bé cho người khác.</span></div>
+        <div style="width: 669px; left: 20px; top: 471px; position: absolute; color: #797777; font-size: 16px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Trước khi quyết định nhận nuôi một bé thú cưng, bạn hãy tự hỏi mình: "Tôi đã sẵn sàng chịu trách nhiệm trọn đời với bé chưa?" Điều này bao gồm trách nhiệm tài chính, nơi ở ổn định, và tinh thần đồng hành lâu dài. Việc nhận nuôi cần sự đồng thuận từ chính bạn và gia đình. Xin cân nhắc kỹ những vấn đề trên trước khi thực hiện các bước dưới đây:</div>
+        <img style="width: 30px; height: 30px; left: 40px; top: 566px; position: absolute" src="{% static 'img/1.png' %}" />
+        <img style="width: 30px; height: 30px; left: 41px; top: 620px; position: absolute" src="{% static 'img/2.png' %}" />
+        <img style="width: 30px; height: 30px; left: 41px; top: 694px; position: absolute" src="{% static 'img/3.png' %}" />
+        <img style="width: 30px; height: 30px; left: 41px; top: 773px; position: absolute" src="{% static 'img/4.png' %}" />
+        <img style="width: 30px; height: 30px; left: 40px; top: 854px; position: absolute" src="{% static 'img/5.png' %}" />
+        <img style="width: 30px; height: 30px; left: 40px; top: 963px; position: absolute" src="{% static 'img/!.png' %}" />
+        <img style="width: 30px; height: 30px; left: 41px; top: 1065px; position: absolute" src="{% static 'img/Star.png' %}" />
+        <img style="width: 456px; height: 421px; left: 846px; top: 473px; position: absolute" src="{% static 'img/bia1.png' %}" />
+        <div style="width: 300px; height: 60px; left: 240px; top: 1434px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="width: 300px; height: 60px; position: relative">
+                <div style="width: 300px; height: 60px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
+                <div style="left: 9px; top: 16px; position: absolute; color: black; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word"> 
+                <form method="post">
+                
+                <label for="pet_id">Chọn loại thú cưng</label>
                 <select name="pet_id" required>
-                    {% for pet in pets %}
-                        <option value="{{ pet.id }}">{{ pet.name }} ({{ pet.species }})</option>
-                    {% endfor %}
+                    
+                        <option value="{{ pet.id }}"> Chó </option>
+                        <option value="{{ pet.id }}"> Mèo </option>
+                        <option value="{{ pet.id }}"> Khác </option>
+                    
                 </select>
-                <button type="submit">Nhận thú cưng</button>
             </form>
-        {% else %}
-            <p>Hiện tại không có thú cưng nào để nhận nuôi.</p>
-        {% endif %}
+            </div>
+                <img style="width: 30px; height: 30px; left: 262px; top: 15px; position: absolute" src="{% static 'img/V.png' %}" />
+            </div>
+            
+        </div>
+        <div style="width: 300px; height: 60px; left: 900px; top: 1442px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="width: 300px; height: 60px; position: relative">
+                <div style="width: 300px; height: 60px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
+                <div style="left: 9px; top: 16px; position: absolute; color: black; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word"> 
+                <form method="post">
+                
+                <label for="pet_id">Giới tính</label>
+                <select name="pet_id" required>
+                    
+                        <option value="{{ pet.id }}"> Đực</option>
+                        <option value="{{ pet.id }}"> Cái  </option>
+                        <option value="{{ pet.id }}"> Tất cả </option>
+                    
+                </select>
+            </form>
+            </div>
+                <img style="width: 30px; height: 30px; left: 262px; top: 15px; position: absolute" src="{% static 'img/V.png' %}" />
+            </div>
+        </div>
+        <div style="width: 300px; height: 60px; left: 240px; top: 1733px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="width: 300px; height: 60px; position: relative">
+                <div style="width: 300px; height: 60px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
+                <div style="left: 9px; top: 16px; position: absolute; color: black; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word">
+                 <form method="post">
+                
+                <label for="pet_id">Độ tuổi</label>
+                <select name="pet_id" required>
+                    
+                        <option value="{{ pet.id }}"> Con non(<6 tháng tuổi) </option>
+                        <option value="{{ pet.id }}"> Thiếu niên(6 tháng - 2 tuổi) </option>
+                        <option value="{{ pet.id }}"> Trưởng thành (2 -8 tuổi) </option>
+                        <option value="{{ pet.id }}"> Cao tuổi (>8 tuổi) </option>
+                    
+                </select>
+            </form>
+            </div>
+                <img style="width: 30px; height: 30px; left: 262px; top: 15px; position: absolute" src="{% static 'img/V.png' %}" />
+            </div>
+        </div>
+        <div style="width: 300px; height: 60px; left: 900px; top: 1734px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="width: 300px; height: 60px; position: relative">
+                <div style="width: 300px; height: 60px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
+                <div style="left: 9px; top: 16px; position: absolute; color: black; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word">
+                <form method="post">
+                
+                <label for="pet_id">Tình trạng sức khỏe</label>
+                <select name="pet_id" required>
+                    
+                        <option value="{{ pet.id }}"> Khỏe mạnh </option>
+                        <option value="{{ pet.id }}"> Khuyết tật hoặc đặc biệt </option>
+                        <option value="{{ pet.id }}"> Có bệnh mãn tính </option>
+                        <option value="{{ pet.id }}"> Chưa rõ </option>
+                        <option value="{{ pet.id }}"> Đang phục hồi sức khỏe </option>
+                </select>
+            </form>
+            </div>
+                <img style="width: 30px; height: 30px; left: 262px; top: 15px; position: absolute" src="{% static 'img/V.png' %}" />
+            </div>
+        </div>
+        <!-- Nút Xem thêm thú cưng -->
+<div class="group3">
+    <div class="overlap-group-3">
+        <div class="text1">
+            <a href="{% url 'view_pets' %}" class="adopt-pet-link2">Xem thêm thú cưng</a>
+        </div>
     </div>
+</div>
 
-    <footer>
-        &copy; 2025 Hệ thống quản lý thú cưng. All rights reserved.
-    </footer>
+<!-- Nút Trang chủ -->
+<div class="group1">
+    <div class="overlap-group-3">
+        <div class="text-wrapper-15">
+            <a href="{% url 'home_pet' %}" class="adopt-pet-link2">Trang chủ</a>
+        </div>
+    </div>
+</div>
+
+<!-- Nút Tặng thú cưng -->
+<div class="group2">
+    <div class="overlap-group-3">
+        <div class="text2">
+            <a href="{% url 'add_pet' %}" class="adopt-pet-link2">Tặng thú cưng</a>
+        </div>
+    </div>
+</div>
+        <div style="width: 360px; height: 0px; left: 723px; top: 1430px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px #D9D9D9 solid"></div>
+        <div style="width: 360px; height: 0px; left: 900px; top: 1595px; position: absolute; transform: rotate(-180deg); transform-origin: 0 0; border: 1px #D9D9D9 solid"></div>
+        <div style="width: 211px; height: 0px; left: 20px; top: 426px; position: absolute; border: 1px #EBE9E9 solid"></div>
+        <div style="width: 1164px; height: 1372px; left: 138px; top: 2099px; position: absolute; background-image: url(https://via.placeholder.com/1164x1372)">
+            <div style="width: 1164px; height: 1372px; left: 0px; top: 0px; position: absolute; background: #FFFDFD; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
+            <div style="height: 398px; left: 60px; top: 32px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Cam<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Đực<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 1 năm<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Chưa rõ <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> năng động, thích chơi với bông len</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/cam.png' %}" />
+            </div>
+            <div style="height: 379px; left: 60px; top: 832px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Bò Sữa<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Cái<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 1,5 tháng<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng: Đã tiêm phòng</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> chưa rõ</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/BoSua.png' %}" />
+            </div>
+            <div style="height: 398px; left: 60px; top: 432px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Mun<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Đực<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 1 tháng<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Đã tiêm phòng <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> năng động, quấn người</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/Mun.png' %}" />
+            </div>
+            <div style="height: 379px; left: 454px; top: 32px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Tâm<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Cái<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 1,4 năm<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Chưa rõ <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> nhát, thích cỏ mèo</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/xam.png' %}" />
+            </div>
+            <div style="height: 398px; left: 454px; top: 832px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Mundo<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Đực<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 2 năm<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Chưa rõ <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> trầm tính, thích nằm phơi nắng</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/Mundo.png' %}" />
+            </div>
+            <div style="height: 398px; left: 454px; top: 432px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Xerko<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Đực<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 1 năm<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Chưa rõ <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> nghe lời, thích nghịch bùn</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/Xerko.png' %}" />
+            </div>
+            <div style="height: 379px; left: 848px; top: 32px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Jame<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Đực<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 2 tháng<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Chưa rõ <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> nghịch ngợm, ăn cá</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/Jame.png' %}" />
+            </div>
+            <div style="height: 379px; left: 848px; top: 832px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Berus<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Đực<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 3 năm<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Chưa rõ <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> hung dữ, ham ăn</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/Berus.png' %}" />
+            </div>
+            <div style="height: 398px; left: 848px; top: 432px; position: absolute">
+                <div style="width: 224px; left: 0px; top: 284px; position: absolute"><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tên:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Corky<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giới tính:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Cái<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tuổi:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> 2 năm<br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tiêm Phòng:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> Chưa rõ <br/></span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Tính Cách:</span><span style="color: #797777; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> năng động, thích chăn cừu, thông minh</span></div>
+                <img style="width: 255px; height: 255px; left: 0px; top: 0px; position: absolute" src="{% static 'img/Corky.png' %}" />
+            </div>
+            <div style="width: 40px; height: 40px; left: 648px; top: 1288px; position: absolute">
+                <div style="width: 40px; height: 40px; left: 0px; top: 0px; position: absolute; background: #797777"></div>
+                <div style="left: 17px; top: 11px; position: absolute; color: white; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">></div>
+            </div>
+            <div style="width: 40px; height: 40px; left: 605px; top: 1288px; position: absolute">
+                <div style="width: 40px; height: 40px; left: 0px; top: 0px; position: absolute; background: #797777"></div>
+                <div style="left: 16px; top: 12px; position: absolute; color: white; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">3</div>
+            </div>
+            <div style="width: 40px; height: 40px; left: 562px; top: 1288px; position: absolute">
+                <div style="width: 40px; height: 40px; left: 0px; top: 0px; position: absolute; background: #797777"></div>
+                <div style="left: 16px; top: 12px; position: absolute; color: white; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">2</div>
+            </div>
+            <div style="width: 40px; height: 40px; left: 519px; top: 1288px; position: absolute">
+                <div style="width: 40px; height: 40px; left: 0px; top: 0px; position: absolute; background: #55B5DB"></div>
+                <div style="left: 16px; top: 12px; position: absolute; color: white; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">1</div>
+            </div>
+            <div style="width: 40px; height: 40px; left: 476px; top: 1288px; position: absolute">
+                <div style="width: 40px; height: 40px; left: 0px; top: 0px; position: absolute; background: #797777"></div>
+                <div style="left: 16px; top: 11px; position: absolute; color: white; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
