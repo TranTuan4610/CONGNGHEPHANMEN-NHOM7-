@@ -5,29 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <style>
-        /* Tổng quan */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa; /* Nền xanh biển nhạt */
-            color: #333;
+            background-color: #ffffff;
         }
 
-        /* Header */
         header {
-            background-color: #0288d1; /* Xanh biển đậm */
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
+            background-color: #439EC2;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-
         header h1 {
             margin: 0;
             font-size: 2em;
         }
-
-        /* Form container */
         .form-container {
             margin: 50px auto;
             padding: 20px;
@@ -57,12 +53,44 @@
             border: 1px solid #ddd;
             font-size: 16px;
         }
-
-        .form-container form input:focus {
-            border-color: #0288d1;
-            outline: none;
+        header .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
+        header .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        header .flag {
+            width: 30px;
+            height: auto;
+        }
+        header .logomini {
+            width: 25px;
+            height: auto;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .form-container .logo {
+            height: 160px;
+        }
+        .form-container .nav {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .form-container form button {
             background-color: #0288d1;
             color: white;
@@ -70,33 +98,84 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
-        .form-container form button:hover {
-            background-color: #026aa7;
+        .or {
+            text-align: center;
+            margin: 20px 0;
+            color: #666;
         }
-
-        /* Footer */
+        .social-login {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .social-login img {
+            width: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+        }      
+        .additional-links {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .additional-links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .additional-links a:hover {
+            text-decoration: underline;
+        }
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 10px;
-            background-color: #b3e5fc; /* Xanh biển nhạt */
-            color: #01579b;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #000000;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Đăng nhập</h1>
+        <div class="contact-info">
+            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/mapxanh.png" class="logomini">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</span>
+            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Email.png"class="logomini">pethopehcm@gmail.com</span>
+            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Phone.png" class="logomini">0389590258</span>
+        </div>
+        <img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/vietnam%201.png" alt="Vietnam Flag" class="flag">
+    </div>
     </header>
-
+    <div class="form-container">
+        <h1><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Logo.png" alt="Pet Hope Logo" class="logo"></h1> 
+        <nav class="nav">
+            <a href="{% url 'home' %}">Trang Chủ</a>
+            <a href="{% url 'adopt_pet' %}">Nhận Nuôi</a>
+            <a href="{% url 'donate' %}">Ủng Hộ - Đóng Góp</a>
+            <a href="{% url 'news' %}">Tin Tức - Sự Kiện</a>
+            <a href="{% url 'about_us' %}">Về Chúng Tôi</a>
+        </nav>
+       <div class="login-container">
+    </div>
     <div class="form-container">
         <h1>Đăng nhập</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Đăng nhập</button>
+            <button type="submit">Đăng nhập<a href="home.html"></a></button>
         </form>
+        <div class="additional-links">
+            <a href="resign.html">Tạo tài khoản</a>
+            <a href="forgot-password.html">Quên mật khẩu?</a>
+        </div>
+        <p class="or">Hoặc</p>
+        <div class="social-login">
+            <a href="https://m.facebook.com/login/?locale=vi_VN" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+                <a href="http://accounts.google.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+            </a>    
+        </div>
+        </div>
     </div>
 
     <footer>
