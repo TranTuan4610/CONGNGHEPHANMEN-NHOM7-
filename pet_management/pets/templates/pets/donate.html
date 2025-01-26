@@ -421,21 +421,37 @@ main {
     margin-bottom: 20px;
 }
 
-.reasons {
+.why-help .reasons div {
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng di chuyển */
+}
+
+.why-help .reasons div:hover {
+    transform: translateY(-10px); /* Di chuyển ảnh lên khi hover */
+}
+
+.why-help .reasons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 10px; /* Khoảng cách giữa các ảnh là 10px */
     justify-items: center;
 }
 
-.reasons div {
-    text-align: center;
+.why-help .reasons img {
+    max-width: 150px; /* Tăng kích thước tối đa của ảnh */
+    max-height: 150px; /* Tăng chiều cao tối đa của ảnh */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.reasons img {
-    max-width: 100px;
-    border-radius: 10px;
+.why-help .reasons img:hover {
+    transform: scale(1.1); /* Tăng kích thước ảnh khi hover */
 }
+
+.why-help .reasons img:hover {
+    transform: scale(1.1); /* Tăng kích thước ảnh khi hover */
+}
+
 
 .slider {
     margin: 40px 0;
@@ -478,6 +494,14 @@ main {
     max-width: 150px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.anh img, .image-container img, .more-image img {
+    transition: transform 0.3s ease;
+}
+
+.anh img:hover, .image-container img:hover, .more-image img:hover {
+    transform: scale(1.1);
 }
 
 /* Media Queries */
