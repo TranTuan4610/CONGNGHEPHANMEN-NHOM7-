@@ -14,4 +14,4 @@ class LoginForm(forms.Form):
 class PetForm(forms.ModelForm):
     class Meta:
         model = Pet
-        fields = ['name', 'species', 'date_of_birth', 'description', 'is_available_for_adoption']
+        fields = ['name', 'species', 'age', 'sex', 'health', 'date_of_birth', 'description', 'is_available_for_adoption']
