@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Đăng nhập</title>
     <style>
         /* Tổng quan */
         body {
@@ -30,15 +30,16 @@
         /* Form container */
         .form-container {
             margin: 50px auto;
-            padding: 30px;
-            max-width: 420px;
+            padding: 20px;
+            max-width: 400px;
             background-color: white;
-            border-radius: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
         .form-container h1 {
+            text-align: center;
             color: #0288d1;
             margin-bottom: 20px;
         }
@@ -48,28 +49,18 @@
             flex-direction: column;
         }
 
-        .form-container form label {
-            text-align: left;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #0288d1;
-        }
-
         .form-container form input,
         .form-container form button {
-            padding: 12px;
+            padding: 10px;
             margin-bottom: 15px;
-            border-radius: 8px;
+            border-radius: 5px;
             border: 1px solid #ddd;
             font-size: 16px;
-            transition: all 0.3s;
         }
 
-        .form-container form input:focus,
-        .form-container form button:hover {
+        .form-container form input:focus {
             border-color: #0288d1;
             outline: none;
-            box-shadow: 0 0 5px rgba(2, 136, 209, 0.6);
         }
 
         .form-container form button {
@@ -77,25 +68,11 @@
             color: white;
             border: none;
             cursor: pointer;
+            transition: all 0.3s;
         }
 
         .form-container form button:hover {
             background-color: #026aa7;
-        }
-
-        .form-container .login-link {
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .form-container .login-link a {
-            color: #0288d1;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .form-container .login-link a:hover {
-            text-decoration: underline;
         }
 
         /* Footer */
@@ -110,20 +87,16 @@
 </head>
 <body>
     <header>
-        <h1>Đăng ký tài khoản</h1>
+        <h1>Đăng nhập</h1>
     </header>
 
     <div class="form-container">
-        <h1>Đăng ký</h1>
+        <h1>Đăng nhập</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Đăng ký</button>
+            <button type="submit">Đăng nhập</button>
         </form>
-        <div class="login-link">
-            <p>Bạn đã có tài khoản? <a href="{% url 'login_user' %}">Đăng nhập ngay</a></p>
-        </div>
-        
     </div>
 
     <footer>
