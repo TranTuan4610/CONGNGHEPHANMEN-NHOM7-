@@ -137,21 +137,20 @@
 <body>
     <header>
         <div class="contact-info">
-            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/mapxanh.png" class="logomini">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</span>
-            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Email.png"class="logomini">pethopehcm@gmail.com</span>
-            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Phone.png" class="logomini">0389590258</span>
+            <span><img src="mapxanh.png" class="logomini">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</span>
+            <span><img src="Email.png" class="logomini">pethopehcm@gmail.com</span>
+            <span><img src="Phone.png" class="logomini">0389590258</span>
         </div>
-        <img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/vietnam%201.png" alt="Vietnam Flag" class="flag">
-    </div>
+        <img src="vietnam.png" alt="Vietnam Flag" class="flag">
     </header>
     <div class="form-container">
-        <h1><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Logo.png" alt="Pet Hope Logo" class="logo"></h1> 
+        <h1><img src="Logo.png" alt="Pet Hope Logo" class="logo"></h1> 
         <nav class="nav">
-            <a href="{% url 'home' %}">Trang Chủ</a>
-            <a href="{% url 'adopt_pet' %}">Nhận Nuôi</a>
-            <a href="{% url 'donate' %}">Ủng Hộ - Đóng Góp</a>
-            <a href="{% url 'news' %}">Tin Tức - Sự Kiện</a>
-            <a href="{% url 'about_us' %}">Về Chúng Tôi</a>
+            <span>Trang Chủ</span>
+            <span>Nhận Nuôi</span>
+            <span>Ủng Hộ - Đóng Góp</span>
+            <span>Tin Tức - Sự Kiện</span>
+            <span>Về Chúng Tôi</span>
         </nav>
        <div class="login-container">
     </div>
@@ -160,7 +159,7 @@
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Đăng nhập<a href="home.html"></a></button>
+            <button type="submit">Đăng nhập</button>
         </form>
         <div class="additional-links">
             <a href="resign.html">Tạo tài khoản</a>
@@ -169,12 +168,11 @@
         <p class="or">Hoặc</p>
         <div class="social-login">
             <a href="https://m.facebook.com/login/?locale=vi_VN" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                <img src="facebook.svg" alt="Facebook">
             </a>
-                <a href="http://accounts.google.com/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+            <a href="http://accounts.google.com/" target="_blank">
+                <img src="google.svg" alt="Google">
             </a>    
-        </div>
         </div>
     </div>
 
