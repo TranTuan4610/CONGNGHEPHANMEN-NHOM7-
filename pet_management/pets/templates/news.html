@@ -5,48 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tin tức</title>
     <style>
+        @keyframes glowing {
+            0% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 215, 0, 1); }
+            100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
             margin: 20px auto;
             padding: 20px;
             max-width: 800px;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #eef2f3, #dfe9f3);
             color: #333;
+            position: relative;
         }
         .news {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: glowing 2s infinite alternate;
+        }
+        .news::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+        }
+        .news::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 50%;
         }
         h1 {
             text-align: center;
             color: #007bff;
+            font-size: 28px;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.3);
         }
         .news-item {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
+            border-bottom: 2px dashed #ddd;
+            padding: 20px 0;
+            transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+            position: relative;
         }
-        .news-item:last-child {
-            border-bottom: none;
+        .news-item:hover {
+            background: #f9f9f9;
+            border-radius: 8px;
+            transform: scale(1.02);
+        }
+        .news-item::before {
+            content: "📰";
+            position: absolute;
+            left: -30px;
+            font-size: 20px;
         }
         h2 {
             color: #0056b3;
+            font-size: 22px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
         p {
-            margin: 10px 0;
+            margin: 12px 0;
+            font-size: 16px;
         }
         strong {
             color: #d9534f;
             cursor: pointer;
+            font-weight: bold;
         }
         strong:hover {
             text-decoration: underline;
         }
+        /* Thêm icon chó mèo */
+        .icon {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            opacity: 0.7;
+        }
+        .icon-left {
+            top: 20px;
+            left: 20px;
+        }
+        .icon-right {
+            bottom: 20px;
+            right: 20px;
+        }
     </style>
 </head>
 <body>
+    <img src="https://img.icons8.com/emoji/80/cat-face-emoji.png" class="icon icon-left" alt="Mèo">
+    <img src="https://img.icons8.com/emoji/80/dog-face-emoji.png" class="icon icon-right" alt="Chó">
+    
     <div class="news">
         <h1>Tin tức mới nhất</h1>
         <div class="news-item">
