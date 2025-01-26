@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Hope - Đăng Ký</title>
+    <title>Đăng Ký</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
         }
 
         header {
-            background-color: #007bff;
+            background-color: #0288d1;
             color: #ffffff;
             padding: 10px 20px;
             display: flex;
@@ -96,7 +96,7 @@
             width: 100%;
             padding: 10px;
             background-color: #ff4d4f;
-            color: white;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -141,15 +141,13 @@
         <div class="logo">
             <img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Logo.png" alt="Pet Hope Logo">
         </div>
-
         <nav>
-            <a href="#">Trang Chủ</a>
-            <a href="#">Nhận Nuôi</a>
-            <a href="#">Ủng Hộ - Đóng Góp</a>
-            <a href="#">Tin Tức - Sự Kiện</a>
-            <a href="#">Về Chúng Tôi</a>
+            <a href="{% url 'home' %}">Trang Chủ</a>
+            <a href="{% url 'adopt_pet' %}">Nhận Nuôi</a>
+            <a href="{% url 'donate' %}">Ủng Hộ - Đóng Góp</a>
+            <a href="{% url 'news' %}">Tin Tức - Sự Kiện</a>
+            <a href="{% url 'about_us' %}">Về Chúng Tôi</a>
         </nav>
-
         <div class="form-container">
             <h2>Đăng Ký</h2>
             <form method="post">
@@ -158,11 +156,15 @@
                 <button type="submit">Đăng ký</button>
             </form>
             <div class="footer">
-                <p>Đã có tài khoản? <a href="#">Đăng nhập</a></p>
+                <p>Đã có tài khoản?<a href="{% url 'login' %}">Đăng nhập</a>
                 <p>Hoặc</p>
                 <div class="social">
+                    <a href="https://m.facebook.com/login/?locale=vi_VN" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                    <a href="http://accounts.google.com/" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+                </a>
                 </div>
             </div>
         </div>
