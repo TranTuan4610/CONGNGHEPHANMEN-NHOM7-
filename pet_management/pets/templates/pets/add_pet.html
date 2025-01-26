@@ -10,111 +10,117 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa; /* Nền xanh biển nhạt */
+            background-color: #f1f8ff; /* Nền xanh nhạt */
             color: #333;
         }
 
         /* Header */
         header {
-            background-color: #0288d1; /* Xanh biển đậm */
+            background-color: #0277bd;
             color: white;
-            padding: 20px 10px;
+            padding: 15px;
             text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         /* Form container */
         .form-container {
-            margin: 50px auto;
-            padding: 20px;
-            max-width: 400px;
+            margin: 40px auto;
+            padding: 25px;
+            max-width: 420px;
             background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .form-container h1 {
             text-align: center;
-            color: #0288d1;
+            color: #0277bd;
             margin-bottom: 20px;
-        }
-
-        .form-container form {
-            display: flex;
-            flex-direction: column;
+            font-size: 22px;
         }
 
         .form-container form label {
-            margin-bottom: 5px;
             font-weight: bold;
-            color: #0288d1;
+            color: #0277bd;
+            display: block;
+            margin-bottom: 6px;
         }
 
         .form-container form input {
+            width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
+            border-radius: 6px;
+            border: 1px solid #ccc;
             font-size: 16px;
+            transition: border 0.3s ease-in-out;
         }
 
         .form-container form input:focus {
-            border-color: #0288d1;
+            border-color: #0277bd;
             outline: none;
+            box-shadow: 0px 0px 5px rgba(2, 119, 189, 0.5);
         }
 
         .form-container form button {
-            padding: 10px;
-            background-color: #0288d1;
+            width: 100%;
+            padding: 12px;
+            background-color: #0277bd;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 16px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: background 0.3s;
         }
 
         .form-container form button:hover {
-            background-color: #026aa7;
+            background-color: #01579b;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 10px;
-            background-color: #b3e5fc; /* Xanh biển nhạt */
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #bbdefb;
             color: #01579b;
+            font-size: 14px;
         }
     </style>
+    <script>
+        function redirectToHome(event) {
+            event.preventDefault();
+            alert("Thêm thú cưng thành công!");
+            window.location.href = "home.html";
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Thêm thú cưng</h1>
+        Thêm thú cưng
     </header>
 
     <div class="form-container">
-        <h1>Thêm thú cưng</h1>
-        <form method="post">
+        <h1>Thêm thú cưng mới</h1>
+        <form method="post" onsubmit="redirectToHome(event)">
             <label for="name">Tên thú cưng:</label>
             <input type="text" id="name" name="name" required>
 
             <label for="species">Loài thú cưng:</label>
             <input type="text" id="species" name="species" required>
 
-            <label for="age">Độ tuổi:</label>      
+            <label for="age">Độ tuổi:</label>
             <input type="text" id="age" name="age" required>
 
             <label for="sex">Giới tính:</label>
             <input type="text" id="sex" name="sex" required>
 
             <label for="health">Tình trạng sức khỏe:</label>
-            `<input type="text" id="health" name="health" required>`
+            <input type="text" id="health" name="health" required>
+
             <button type="submit">Thêm thú cưng</button>
         </form>
     </div>
