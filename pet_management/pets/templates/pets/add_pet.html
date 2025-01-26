@@ -106,6 +106,8 @@
     <div class="form-container">
         <h1>Thêm thú cưng mới</h1>
         <form method="post" onsubmit="redirectToHome(event)">
+            {% csrf_token %}
+            {{ form.as_p }}
             <label for="name">Tên thú cưng:</label>
             <input type="text" id="name" name="name" required>
 
