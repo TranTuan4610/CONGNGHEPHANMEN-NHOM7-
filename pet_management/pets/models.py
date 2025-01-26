@@ -12,6 +12,9 @@ class User(AbstractUser):
 class Pet(models.Model):
     name = models.CharField(max_length=255)
     species = models.CharField(max_length=255)
+    age = models.IntegerField()
+    sex = models.CharField(max_length=50)
+    health = models.CharField(max_length=255)
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)  # Ngày sinh
     description = models.TextField(null=True, blank=True)  # Mô tả chi tiết
