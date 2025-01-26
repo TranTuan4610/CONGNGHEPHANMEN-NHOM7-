@@ -3,171 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Ký</title>
+    <title>Đăng ký</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #e0f7fa;
+            color: #333;
         }
-
         header {
             background-color: #0288d1;
-            color: #ffffff;
+            color: white;
             padding: 10px 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
         }
-
-        header .contact-info {
+        .nav {
             display: flex;
-            align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
-
-        header .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .nav span {
+            font-size: 14px;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 5px 10px;
         }
-
-        header .flag {
-            width: 30px;
-            height: auto;
+        .form-container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 350px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-
-        .main {
+        .form-container h1 {
+            color: #0288d1;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .form-container form {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin: 20px auto;
-            max-width: 1200px;
         }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .logo img {
-            width: 150px;
-            height: auto;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .form-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .form-container h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .form-container input {
-            width: 100%;
+        .form-container form input, .form-container form button {
             padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 14px;
         }
-
-        .form-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #ff4d4f;
-            color: #ffffff;
+        .form-container form button {
+            background-color: #0288d1;
+            color: white;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
         }
-
-        .form-container button:hover {
-            background-color: #e03c3d;
+        .login-link p {
+            font-size: 14px;
         }
-
-        .form-container .social {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
+        .login-link a {
+            color: #0288d1;
+            text-decoration: none;
         }
-
-        .form-container .social img {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
+        .login-link a:hover {
+            text-decoration: underline;
         }
-
-        .footer {
+        footer {
             text-align: center;
             margin-top: 30px;
+            padding: 10px;
+            background-color: #b3e5fc;
+            color: #01579b;
+            font-size: 12px;
         }
-
     </style>
 </head>
 <body>
     <header>
-        <div class="contact-info">
-            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/mapxanh.png" class="logomini">QUẬN 12, THÀNH PHỐ HỒ CHÍ MINH</span>
-            <span><img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Email.png"class="logomini">pethopehcm@gmail.com</span>
-            <span><img src="https://github.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/blob/main/pet_management/pets/static/img/Phone.png?raw=true">0389590258</span>
+        <div class="nav">
+            <span>Trang Chủ</span>
+            <span>Nhận Nuôi</span>
+            <span>Ủng Hộ - Đóng Góp</span>
+            <span>Tin Tức - Sự Kiện</span>
+            <span>Về Chúng Tôi</span>
         </div>
-        <img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/vietnam%201.png" alt="Vietnam Flag">
     </header>
 
-    <div class="main">
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/TranTuan4610/CONGNGHEPHANMEN-NHOM7-/refs/heads/main/pet_management/pets/static/img/Logo.png" alt="Pet Hope Logo">
-        </div>
-        <nav>
-            <a href="{% url 'home' %}">Trang Chủ</a>
-            <a href="{% url 'adopt_pet' %}">Nhận Nuôi</a>
-            <a href="{% url 'donate' %}">Ủng Hộ - Đóng Góp</a>
-            <a href="{% url 'news' %}">Tin Tức - Sự Kiện</a>
-            <a href="{% url 'about_us' %}">Về Chúng Tôi</a>
-        </nav>
-        <div class="form-container">
-            <h2>Đăng Ký</h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Đăng ký</button>
-            </form>
-            <div class="footer">
-                <p>Đã có tài khoản?<a href="{% url 'login' %}">Đăng nhập</a>
-                <p>Hoặc</p>
-                <div class="social">
-                    <a href="https://m.facebook.com/login/?locale=vi_VN" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                </a>
-                    <a href="http://accounts.google.com/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
-                </a>
-                </div>
-            </div>
+    <div class="form-container">
+        <h1>Đăng ký</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Đăng ký</button>
+        </form>
+        <div class="login-link">
+            <p>Bạn đã có tài khoản? <a href="{% url 'login_user' %}">Đăng nhập ngay</a></p>
         </div>
     </div>
+
+    <footer>
+        &copy; 2025 Hệ thống quản lý thú cưng. All rights reserved.
+    </footer>
 </body>
 </html>
