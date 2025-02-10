@@ -1561,15 +1561,11 @@ body {
                     <a href="{% url 'home' %}">
                         <img src="{% static 'img/pet-removebg-preview 1.png' %}" alt="LOGO" style="margin-top: 2cm; width: 10%;" />
                     </a>
-                     {% if user.is_authenticated %}
-                <a href="{% url 'login_user' %}">
-                    <img class="test-account" src="{% static 'img/Test Account.png' %}" alt="ANH DANG NHAP" />
-                </a>
-            {% else %}
-                <a href="{% url 'register_user' %}">
-                    <img class="test-account" src="{% static 'img/Test Account.png' %}" alt="ANH DANG NHAP" />
-                </a>
-            {% endif %}
+                    
+                    </a> 
+                    <a href="{% url 'register_user' %}">
+                        <img class="test-account" src="{% static 'img/Test Account.png' %}" alt="ANH DANG NHAP" />
+                    </a>
                     <p class="text-wrapper-24">CỨU TRỢ - NHẬN NUÔI THÚ CƯNG PET HOPE</p>
                     <p class="text-wrapper-25">
                         PetHouse là một nền tảng kết nối những trái tim yêu thương dành cho thú cưng, hoạt động vì mục tiêu cứu trợ
