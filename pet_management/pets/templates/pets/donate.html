@@ -611,11 +611,11 @@ footer a:hover {
 
         <div class="Congcu">
             <ul>
-                <li><a href="home.com">Trang chủ</a></li>
-                <li><a href="add_pet.com">Nhận nuôi</a></li>
-                <li><a href="donate.com" style="font-weight: bold; text-decoration: underline;">Ủng hộ - Đóng góp</a></li>
-                <li><a href="news.xom">Tin tức - Sự kiện</a></li>
-                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="{% url 'home' %}">Trang chủ</a>
+                <li><a href="{% url 'adopt_pet' %}">Nhận nuôi</a></li>
+                <li><a href="{% url 'donate_to_fund' %}" style="font-weight: bold; text-decoration: underline;">Ủng hộ - Đóng góp</a></li>
+                <li><a href="{% url 'news' %}">Tin tức - Sự kiện</a></li>
+                <li><a href="{% url 'about_us' %}">Về chúng tôi</a></li>
             </ul>
         </div>
     </nav>
