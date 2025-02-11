@@ -196,12 +196,12 @@ img {
 
 nav {
     display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    justify-content: space-between; /* Đặt logo và menu ở hai phía đối diện */
-    background-color: #f8f8f8; /* Màu nền của thanh điều hướng */
-    padding: 10px 20px; /* Khoảng cách bên trong thanh điều hướng */
-    border-bottom: 1px solid #ccc; /* Đường viền dưới thanh điều hướng */
-    position: relative; /* Giữ các phần tử bên trong có thể định vị bằng absolute */
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #f8f8f8; 
+    padding: 10px 20px; 
+    border-bottom: 1px solid #ccc; 
+    position: relative;
 }
 
 .Logo {
@@ -262,23 +262,23 @@ nav {
 }
 
 .anh {
-    display: flex; /* Sử dụng Flexbox để căn giữa */
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    gap: 50px; /* Khoảng cách giữa các hình ảnh */
-    height: 40vh; /* Chiều cao của container */
-    background-color: #f8f8f8; /* Màu nền (tuỳ chọn) */
-    padding: 20px; /* Thêm khoảng cách bên trong container */
-    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước container */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 50px; 
+    height: 40vh; 
+    background-color: #f8f8f8; 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 .anh img {
-    max-width: 100%; /* Hình ảnh không vượt quá chiều rộng container */
-    max-height: 100%; /* Hình ảnh không vượt quá chiều cao container */
-    height: auto; /* Giữ tỷ lệ chiều cao tự động */
-    width: auto; /* Giữ tỷ lệ chiều rộng tự động */
-    object-fit: contain; /* Toàn bộ hình ảnh sẽ nằm trong khung và giữ tỷ lệ */
-    border-radius: 10px; /* Bo tròn góc hình ảnh (tuỳ chọn) */
+    max-width: 100%; 
+    max-height: 100%; 
+    height: auto; 
+    width: auto; 
+    object-fit: contain; 
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng (tuỳ chọn) */
     transition: transform 0.3s ease; /* Hiệu ứng mượt khi hover */
 }
@@ -322,16 +322,16 @@ main {
 
 
 .anh {
-    width: 100vw;  /* Chiếm toàn bộ chiều ngang màn hình */
-    display: flex;  /* Sắp xếp các ảnh theo hàng ngang */
-    justify-content: center;  /* Căn giữa ảnh theo chiều ngang */
-    align-items: center;  /* Căn giữa ảnh theo chiều dọc */
-    gap: 10px;  /* Khoảng cách giữa các ảnh */
+    width: 100vw;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    gap: 10px;  
 }
 
 .anh img {
-    width: 50%;  /* Mỗi ảnh chiếm 50% chiều ngang của phần tử cha */
-    height: auto;  /* Giữ nguyên tỉ lệ ảnh */
+    width: 50%;  
+    height: auto;  
     object-fit: cover;  /* Đảm bảo ảnh không bị méo */
 }
 
@@ -363,8 +363,8 @@ main {
 }
 
 .intro-img img {
-    width: 100%;  /* Ảnh tự điều chỉnh theo kích thước */
-    max-width: 400px;  /* Giới hạn kích thước ảnh */
+    width: 100%;  
+    max-width: 400px;  
     height: auto;
     border-radius: 10px;
 }
@@ -374,10 +374,13 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100%; 
+    max-width: none; 
+    margin: 0; 
     text-align: center;
+    box-sizing: border-box; 
 }
+
 
 .form-donation h2 {
     text-align: center;
@@ -403,6 +406,7 @@ main {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%; 
 }
 
 .form-donation button:hover {
@@ -431,13 +435,13 @@ main {
 .why-help .reasons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px; /* Khoảng cách giữa các ảnh là 10px */
+    gap: 10px; 
     justify-items: center;
 }
 
 .why-help .reasons img {
-    max-width: 250px; /* Tăng kích thước tối đa của ảnh */
-    max-height: 250px; /* Tăng chiều cao tối đa của ảnh */
+    max-width: 250px; 
+    max-height: 250px; 
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -447,7 +451,7 @@ main {
 }
 
 .why-help .reasons img:hover {
-    transform: scale(1.1); /* Tăng kích thước ảnh khi hover */
+    transform: scale(1.1); 
 }
 
 .reasons {
@@ -559,18 +563,18 @@ main {
 }
 
 footer {
-    text-align: center; /* Căn giữa nội dung */
-    padding: 20px; /* Khoảng cách bên trong */
-    background-color: #1dacd8; /* Màu nền nhạt */
-    border-top: 2px solid #e0e0e0; /* Đường viền trên */
-    font-size: 14px; /* Kích thước chữ nhỏ gọn */
-    color: #555; /* Màu chữ dịu mắt */
-    margin-top: 20px; /* Tạo khoảng cách trên cùng */
+    text-align: center; 
+    padding: 20px; 
+    background-color: #1dacd8; 
+    border-top: 2px solid #e0e0e0; 
+    font-size: 14px; 
+    color: #555; 
+    margin-top: 20px; 
 }
 
 footer a {
-    color: #007BFF; /* Màu liên kết trong footer */
-    text-decoration: none; /* Loại bỏ gạch chân */
+    color: #007BFF; 
+    text-decoration: none; 
     transition: color 0.3s ease; /* Thêm hiệu ứng mượt cho màu liên kết */
 }
 
@@ -643,14 +647,6 @@ footer a:hover {
             <div class="intro-img">
                 <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/avatar-anh-meo-cute-3.jpg" alt="PetHope">
             </div>
-        </div>
-        
-            <!--
-            <div class="image-container">
-                <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/avatar-anh-meo-cute-3.jpg" alt="PetHope">
-            </div> 
-             -->
-           
         </div>
 
         <div class="form-donation">
