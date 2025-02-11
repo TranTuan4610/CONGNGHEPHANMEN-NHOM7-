@@ -320,56 +320,52 @@ main {
     padding: 20px;
 }
 
+
 .anh {
-    text-align: center;
-    margin-bottom: 20px;
+    width: 100vw;  /* Chiếm toàn bộ chiều ngang màn hình */
+    display: flex;  /* Sắp xếp các ảnh theo hàng ngang */
+    justify-content: center;  /* Căn giữa ảnh theo chiều ngang */
+    align-items: center;  /* Căn giữa ảnh theo chiều dọc */
+    gap: 10px;  /* Khoảng cách giữa các ảnh */
 }
 
 .anh img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 10px;
-    border-radius: 10px;
+    width: 50%;  /* Mỗi ảnh chiếm 50% chiều ngang của phần tử cha */
+    height: auto;  /* Giữ nguyên tỉ lệ ảnh */
+    object-fit: cover;  /* Đảm bảo ảnh không bị méo */
 }
 
 .Chamngon {
     text-align: center;
-    margin: 20px 0;
+    font-size: large;
 }
-
-.Chamngon h1 {
-    font-size: 24px;
-    color: #555;
-}
-
 .container {
+    width: 100vw;  /* Chiếm toàn bộ chiều ngang */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.intro {
-    text-align: center;
-    background: #ffffff;
+    gap: 20px;  /* Khoảng cách giữa văn bản và ảnh */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: large;
 }
 
-.intro a {
-    color: #007BFF;
-    text-decoration: none;
+.intro-text {
+    flex: 1;  /* Chiếm một nửa không gian */
+    max-width: 50%;
+    text-align: left;
 }
 
-.intro a:hover {
-    text-decoration: underline;
+.intro-img {
+    flex: 1;  /* Chiếm một nửa không gian */
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
-.image-container img {
-    max-width: 100%;
+.intro-img img {
+    width: 100%;  /* Ảnh tự điều chỉnh theo kích thước */
+    max-width: 400px;  /* Giới hạn kích thước ảnh */
+    height: auto;
     border-radius: 10px;
 }
 
@@ -380,6 +376,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .form-donation h2 {
@@ -402,7 +399,7 @@ main {
 .form-donation button {
     padding: 10px;
     border: none;
-    background: #007BFF;
+    background: hsl(198, 91%, 45%);
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -419,6 +416,7 @@ main {
 
 .why-help h2 {
     margin-bottom: 20px;
+    font-size: x-large;
 }
 
 .why-help .reasons div {
@@ -438,8 +436,8 @@ main {
 }
 
 .why-help .reasons img {
-    max-width: 150px; /* Tăng kích thước tối đa của ảnh */
-    max-height: 150px; /* Tăng chiều cao tối đa của ảnh */
+    max-width: 250px; /* Tăng kích thước tối đa của ảnh */
+    max-height: 250px; /* Tăng chiều cao tối đa của ảnh */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -452,6 +450,9 @@ main {
     transform: scale(1.1); /* Tăng kích thước ảnh khi hover */
 }
 
+.reasons {
+    font-size:large;
+}
 
 .slider {
     margin: 40px 0;
@@ -629,17 +630,27 @@ footer a:hover {
         <div class="Chamngon">
             <h1>Trao đi yêu thương cứu lấy những mãnh đời nhỏ bé</h1>
         </div>
-
+        
         <div class="container">
-            <div class="intro">
+            <!-- Phần nội dung -->
+            <div class="intro-text">
                 <p>Hành trình cứu giúp và chăm sóc thú cưng bị bỏ rơi cần sự chung tay của tất cả mọi người. Mỗi đóng góp của bạn, dù nhỏ bé, đều mang lại hy vọng và cuộc sống tốt đẹp hơn cho các bé. Hãy trở thành người hùng của các bé thú cưng hôm nay!</p>
                 <p>Link đóng góp thú cưng: <a href="add_pet.html" alt="Đóng góp thú cưng">AddPet.PetHope</a></p>
                 <p>Quỹ hiện tại: <a href="view_balance.html" alt="Quỹ hiện tại">ViewBalance.PetHope</a></p>
             </div>
-
-            <div class="image-container">
+        
+            <!-- Phần ảnh -->
+            <div class="intro-img">
                 <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/avatar-anh-meo-cute-3.jpg" alt="PetHope">
             </div>
+        </div>
+        
+            <!--
+            <div class="image-container">
+                <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/avatar-anh-meo-cute-3.jpg" alt="PetHope">
+            </div> 
+             -->
+           
         </div>
 
         <div class="form-donation">
